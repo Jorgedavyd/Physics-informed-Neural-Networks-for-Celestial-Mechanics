@@ -49,6 +49,8 @@ INPUT /usr/share/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/share/texmf-dist/tex/latex/apacite/apacite.sty
 INPUT /usr/share/texmf-dist/tex/latex/apacite/apacite.sty
+INPUT /usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/share/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
@@ -158,6 +160,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
