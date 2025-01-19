@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737234610.5908 "agujournaltemplate.tex" "agujournaltemplate.pdf" "agujournaltemplate" 1737234610.98888 2
+["pdflatex"] 1737255663.88082 "agujournaltemplate.tex" "agujournaltemplate.pdf" "agujournaltemplate" 1737255664.25807 2
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1736268207 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1736268207 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -99,12 +99,12 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1736268207 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1736268207 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1737133826.54002 5318467 8236939515598d005dfbcc2e1a40f206 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1737133792 7112998 7bef9b7a9270f4c6974cc998689ae1e9 ""
-  "agujournal2019.cls" 1737220003.31 40688 b442a0d4e8a299883855595037ff6651 ""
-  "agujournaltemplate.aux" 1737234610.92051 1580 78f1be0871ffa911f994a5af2ba49ce4 "pdflatex"
-  "agujournaltemplate.tex" 1737234609.71384 28953 ba6b58d8d3eab272068aac54d45bb5a9 ""
-  "trackchanges.sty" 1737220003.31334 26287 09689e5e9db973d136f0537b8570fadf ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1737111138.53132 5318467 8236939515598d005dfbcc2e1a40f206 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1737111114 7112999 a088e0b848ee72b78c3e0fdf06374499 ""
+  "agujournal2019.cls" 1731367162 40688 b442a0d4e8a299883855595037ff6651 ""
+  "agujournaltemplate.aux" 1737255664.17991 1615 bbae19cfd79e80709a895a244d4a56b8 "pdflatex"
+  "agujournaltemplate.tex" 1737255662.42325 26229 fda38bc4ff2ab994b99fbdd26c9eaf67 ""
+  "trackchanges.sty" 1731367162 26287 09689e5e9db973d136f0537b8570fadf ""
   (generated)
   "agujournaltemplate.aux"
   "agujournaltemplate.log"

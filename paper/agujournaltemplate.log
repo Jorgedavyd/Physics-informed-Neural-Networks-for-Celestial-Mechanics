@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  18 JAN 2025 18:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  19 JAN 2025 00:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -266,20 +266,20 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 ) (./agujournaltemplate.aux)
 \openout1 = `agujournaltemplate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count300
@@ -318,219 +318,475 @@ File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 115.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 115.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (13.849pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 This work presents a novel ap-proach to solv-ing the N-body prob-lem in ce-les-tial me-chan- 
+ []
+
+
+Overfull \hbox (18.84908pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 ics us-ing Physics-Informed Neu-ral Net-works (PINNs). By in-cor-po-rat-ing Hamil-ton's equa- 
+ []
+
+
+Overfull \hbox (12.40456pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 tions di-rectly into the neu-ral net-work ar-chi-tec-ture through the loss func-tion, we de-velop 
+ []
+
+
+Overfull \hbox (13.73798pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 a uni-ver-sal ap-prox-i-ma-tor that in-her-ently pre-serves fun-da-men-tal phys-i-cal prop-er-ties such 
+ []
+
+
+Overfull \hbox (11.73796pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 as en-ergy con-ser-va-tion and phase space in-com-press-ibil-ity. Our method-ol-ogy em-beds the 
+ []
+
+
+Overfull \hbox (16.01582pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 clas-si-cal grav-i-ta-tional po-ten-tial func-tion and ki-netic en-ergy trans-for-ma-tions into the net- 
+ []
+
+
+Overfull \hbox (14.23793pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 work's learn-ing pro-cess, elim-i-nat-ing the need for ex-ten-sive train-ing datasets typ-i-cally re- 
+ []
+
+
+Overfull \hbox (10.18236pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 quired in tra-di-tional ma-chine learn-ing ap-proaches. The net-work is trained us-ing a com- 
+ []
+
+
+Overfull \hbox (1.09909pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 pos-ite loss func-tion that com-bines par-tial dif-fer-en-tial equa-tion con-straints with ini-tial 
+ []
+
+
+Overfull \hbox (10.26584pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 con-di-tion re-quire-ments, al-low-ing for dy-namic adap-ta-tion to var-i-ous mass con-fig-u-ra-tions 
+ []
+
+
+Overfull \hbox (9.68237pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 and ini-tial states. Through com-par-i-son with con-ven-tional nu-mer-i-cal solvers, we demon- 
+ []
+
+
+Overfull \hbox (8.79352pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 strate that our ap-proach main-tains com-pa-ra-ble ac-cu-racy while of-fer-ing sig-nif-i-cant com- 
+ []
+
+
+Overfull \hbox (14.18253pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 pu-ta-tional ad-van-tages, par-tic-u-larly for sys-tems re-quir-ing mul-ti-ple eval-u-a-tions with vary- 
+ []
+
+
+Overfull \hbox (0.84894pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 ing ini-tial con-di-tions. This work bridges the gap be-tween clas-si-cal ce-les-tial me-chan-ics 
+ []
+
+
+Overfull \hbox (0.15462pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 and mod-ern ma-chine learn-ing tech-niques, of-fer-ing a promis-ing frame-work for ef-fi-cient 
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 204.
+(Font)              size <10.95> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 204.
+(Font)              size <10.95> substituted on input line 73.
 
 
-Package natbib Warning: Citation `heggie2005classicalgravitationalnbodyproblem' on page 2 undefined on input line 205.
+Package natbib Warning: Citation `newton1833philosophiae' on page 2 undefined on input line 75.
 
 
-Overfull \hbox (5.70346pt too wide) in paragraph at lines 216--216
-[]\OT1/cmr/bx/n/10 Three-body prob-lem | From New-ton to su-per-com-puter plus ma- 
+Overfull \hbox (13.46007pt too wide) in paragraph at lines 75--76
+[]\OT1/cmr/m/n/10 The three-body prob-lem is a cor-ner-stone of ce-les-tial me-chan-ics and dy-nam-i-cal sys- 
  []
 
 
-Package natbib Warning: Citation `Liao_2022' on page 2 undefined on input line 217.
-
-
-Overfull \hbox (11.94623pt too wide) in paragraph at lines 217--218
-[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) iden-ti-fies pe-ri-odic or-bits within three-body sys-tems with data-driven meth-ods. 
+Overfull \hbox (8.65462pt too wide) in paragraph at lines 75--76
+\OT1/cmr/m/n/10 tems, de-scrib-ing the mo-tion of three masses un-der mu-tual grav-i-ta-tional in-ter-ac-tion. Its 
  []
 
 
-Overfull \hbox (4.51558pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 His-tor-i-cally, only a lim-ited num-ber of such or-bits were dis-cov-ered over three cen-turies. 
+Overfull \hbox (4.82132pt too wide) in paragraph at lines 75--76
+\OT1/cmr/m/n/10 sig-nif-i-cance lies not only in its ap-pli-ca-tions to as-tro-physics but also in its foun-da-tional 
  []
 
 
-Overfull \hbox (4.59904pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 The au-thors in-tro-duce an in-no-va-tive ap-proach that lever-ages ma-chine learn-ing, specif- 
+Overfull \hbox (6.3074pt too wide) in paragraph at lines 75--76
+\OT1/cmr/m/n/10 role in chaos the-ory and non-lin-ear dy-nam-ics. First for-mu-lated in (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) (1687), the prob- 
  []
 
 
-Overfull \hbox (1.37683pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 i-cally ar-ti-fi-cial neu-ral net-works (ANNs), to sys-tem-at-i-cally un-cover pla-nar pe-ri-odic or- 
+Overfull \hbox (25.59906pt too wide) in paragraph at lines 75--76
+\OT1/cmr/m/n/10 lem has chal-lenged math-e-mati-cians and physi-cists for cen-turies due to its non-integrability.  
  []
 
 
-Overfull \hbox (2.29352pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 bits for three-body sys-tems with ar-bi-trary masses. By start-ing with a known pe-ri-odic 
+Package natbib Warning: Citation `euler' on page 2 undefined on input line 77.
+
+
+Package natbib Warning: Citation `Lagrange' on page 2 undefined on input line 77.
+
+
+Overfull \hbox (24.3213pt too wide) in paragraph at lines 77--78
+[]\OT1/cmr/m/n/10 Initial ef-forts to ad-dress the three-body prob-lem em-ployed an-a-lyt-i-cal meth-ods. Leon- 
  []
 
 
-Overfull \hbox (5.7102pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 or-bit, their method it-er-a-tively ex-pands the set of known or-bits, ef-fec-tively train-ing the 
+Overfull \hbox (0.26569pt too wide) in paragraph at lines 77--78
+\OT1/cmr/m/n/10 hard Eu-ler and Joseph-Louis La-grange, in the 18th cen-tury, de-rived spe-cific so-lu-tions 
  []
 
 
-Overfull \hbox (24.68239pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 ANN to pre-dict ac-cu-rate pe-ri-odic or-bits across var-i-ous mass con-fig-u-ra-tions. This ap-proach 
+Overfull \hbox (15.08511pt too wide) in paragraph at lines 77--78
+\OT1/cmr/m/n/10 for sim-pli-fied cases, such as collinear con-fig-u-ra-tions (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) (Eu-ler, 1765) and equi-lat-eral tri- 
  []
 
 
-Overfull \hbox (4.2102pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 not only broad-ens the un-der-stand-ing of three-body dy-nam-ics but also un-der-scores the 
+Overfull \hbox (28.58522pt too wide) in paragraph at lines 77--78
+\OT1/cmr/m/n/10 an-gle con-fig-u-ra-tions (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 )(La-grange, 1772). These so-lu-tions re-vealed equi-lib-rium points|now 
  []
 
 
-Overfull \hbox (9.09914pt too wide) in paragraph at lines 217--218
-\OT1/cmr/m/n/10 po-ten-tial of com-bin-ing high-performance com-put-ing with ar-ti-fi-cial in-tel-li-gence to tackle 
+Package natbib Warning: Citation `Poincare' on page 2 undefined on input line 79.
+
+
+Overfull \hbox (8.09903pt too wide) in paragraph at lines 79--80
+[]\OT1/cmr/m/n/10 Later, Henri Poincar^^Se demon-strated the im-pos-si-bil-ity of a gen-eral an-a-lyt-i-cal so-lu- 
  []
 
 
-Overfull \hbox (16.57278pt too wide) in paragraph at lines 218--218
-[]\OT1/cmr/bx/n/10 Newton vs the ma-chine: solv-ing the chaotic three-body prob-lem us- 
+Overfull \hbox (18.07127pt too wide) in paragraph at lines 79--80
+\OT1/cmr/m/n/10 tion, show-ing that the sys-tem's be-hav-ior is in-her-ently chaotic and sen-si-tive to ini-tial con- 
  []
 
 
-Package natbib Warning: Citation `Breen_2020' on page 2 undefined on input line 219.
-
-
-Overfull \hbox (10.16843pt too wide) in paragraph at lines 219--220
-[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) ad-dress the com-pu-ta-tional chal-lenges in-her-ent in solv-ing the three-body prob- 
+Overfull \hbox (6.4185pt too wide) in paragraph at lines 79--80
+\OT1/cmr/m/n/10 di-tions (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 )(Poincar^^Se, 1890). Poincar^^Se's work laid the foun-da-tion for mod-ern chaos the- 
  []
 
 
-Overfull \hbox (1.21016pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 lem due to its chaotic na-ture. Tra-di-tional nu-mer-i-cal meth-ods of-ten de-mand ex-ten-sive 
+Overfull \hbox (10.2935pt too wide) in paragraph at lines 79--80
+\OT1/cmr/m/n/10 ory, em-pha-siz-ing the ne-ces-sity of nu-mer-i-cal meth-ods for ex-plor-ing the dy-nam-ics of such 
  []
 
 
-Overfull \hbox (0.76567pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 com-pu-ta-tional re-sources and time to achieve ac-cu-rate so-lu-tions. To mit-i-gate this, the 
+Overfull \hbox (3.93236pt too wide) in paragraph at lines 81--82
+[]\OT1/cmr/m/n/10 Karl Sund-man (1912) made sig-nif-i-cant progress by prov-ing that a con-ver-gent se- 
  []
 
 
-Overfull \hbox (7.73792pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 au-thors trained a deep ar-ti-fi-cial neu-ral net-work (ANN) on a dataset of so-lu-tions gen-er- 
+Overfull \hbox (7.84904pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 ries so-lu-tion ex-ists for the three-body prob-lem un-der spe-cific con-di-tions, al-beit im-prac- 
  []
 
 
-Overfull \hbox (9.96016pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 ated by high-precision nu-mer-i-cal in-te-gra-tors. Their find-ings demon-strate that the ANN 
+Overfull \hbox (4.3211pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 ti-cal due to its slow con-ver-gence. Mod-ern nu-mer-i-cal tech-niques have since be-come the 
  []
 
 
-Overfull \hbox (1.9046pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 can pre-dict the mo-tions of three-body sys-tems over bounded time in-ter-vals with fixed 
+Overfull \hbox (10.23805pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 pri-mary tool for study-ing the three-body prob-lem and its gen-er-al-iza-tion to N-body sys- 
  []
 
 
-Overfull \hbox (5.76576pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 com-pu-ta-tional costs, achiev-ing speeds up to 100 mil-lion times faster than con-ven-tional 
+Overfull \hbox (18.0158pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 tems. Ad-vances in com-pu-ta-tional meth-ods have un-cov-ered re-mark-able pe-ri-odic so-lu-tions, 
  []
 
 
-Overfull \hbox (9.29353pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10 solvers. This ap-proach holds promise for ef-fi-ciently sim-u-lat-ing com-plex many-body sys- 
+Overfull \hbox (2.12677pt too wide) in paragraph at lines 83--84
+[]\OT1/cmr/m/n/10 Numerical ap-proaches have also high-lighted the chaotic na-ture of three-body in- 
  []
 
 
-Overfull \hbox (10.64917pt too wide) in paragraph at lines 220--220
-[]\OT1/cmr/bx/n/10 Physics In-formed Deep Learn-ing: Data-driven So-lu-tions of Non-lin- 
+Overfull \hbox (17.79353pt too wide) in paragraph at lines 83--84
+\OT1/cmr/m/n/10 ter-ac-tions, where small per-tur-ba-tions in ini-tial con-di-tions can lead to vastly dif-fer-ent tra- 
  []
 
 
-Package natbib Warning: Citation `raissi2017physicsinformeddeeplearning' on page 2 undefined on input line 221.
-
-
-Overfull \hbox (10.58502pt too wide) in paragraph at lines 221--222
-[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) in-tro-duces Physics-Informed Neu-ral Net-works (PINNs) as a novel ap-proach to 
+Overfull \hbox (1.01569pt too wide) in paragraph at lines 83--84
+\OT1/cmr/m/n/10 jec-to-ries (Laskar, 1994). Such find-ings un-der-score the ne-ces-sity of com-pu-ta-tional pre- 
  []
 
 
-Overfull \hbox (8.62688pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 solv-ing prob-lems gov-erned by par-tial dif-fer-en-tial equa-tions (PDEs). PINNs in-cor-po-rate 
+Overfull \hbox (19.34888pt too wide) in paragraph at lines 85--86
+[]\OT1/cmr/m/n/10 Recent years have seen the rise of uni-ver-sal ap-prox-i-ma-tors, such as neu-ral net-works, 
  []
 
 
-Overfull \hbox (10.07118pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 the un-der-ly-ing phys-i-cal laws, ex-pressed as PDEs, di-rectly into the neu-ral net-work's loss 
+Overfull \hbox (6.57127pt too wide) in paragraph at lines 85--86
+\OT1/cmr/m/n/10 in mod-el-ing com-plex dy-nam-i-cal sys-tems. These meth-ods lever-age their ca-pac-ity to ap- 
  []
 
 
-Overfull \hbox (17.43242pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 func-tion, en-abling them to learn so-lu-tions while re-spect-ing the gov-ern-ing equa-tions. This 
+Overfull \hbox (24.71028pt too wide) in paragraph at lines 85--86
+\OT1/cmr/m/n/10 prox-i-mate ar-bi-trary func-tions, mak-ing them well-suited for learn-ing the un-der-ly-ing physics 
  []
 
 
-Overfull \hbox (22.01572pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 elim-i-nates the need for la-beled data, re-ly-ing in-stead on the resid-u-als of the PDEs to guide 
+Overfull \hbox (8.1268pt too wide) in paragraph at lines 85--86
+\OT1/cmr/m/n/10 of ce-les-tial me-chan-ics. Zhang et al. (2020) demon-strated the util-ity of deep neu-ral net- 
  []
 
 
-Overfull \hbox (6.18242pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 the train-ing. The study demon-strates the ap-pli-ca-tion of PINNs to a va-ri-ety of for-ward 
+Overfull \hbox (2.23788pt too wide) in paragraph at lines 85--86
+\OT1/cmr/m/n/10 works in pre-dict-ing tra-jec-to-ries in chaotic sys-tems, of-fer-ing a data-driven com-ple-ment 
  []
 
 
-Overfull \hbox (20.87682pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 and in-verse prob-lems, such as fluid dy-nam-ics and heat con-duc-tion. The frame-work is par- 
+Overfull \hbox (22.32117pt too wide) in paragraph at lines 87--88
+[]\OT1/cmr/m/n/10 The cur-rent work aims to in-te-grate the prin-ci-ples of physics-informed ma-chine learn- 
  []
 
 
-Overfull \hbox (14.96024pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 tic-u-larly use-ful for prob-lems with lim-ited ob-ser-va-tional data or where tra-di-tional nu-mer- 
+Overfull \hbox (8.57132pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10 ing (PIML) with the study of ce-les-tial me-chan-ics, fo-cus-ing on the N-body prob-lem. By 
  []
 
 
-Overfull \hbox (7.54346pt too wide) in paragraph at lines 221--222
-\OT1/cmr/m/n/10 i-cal solvers are com-pu-ta-tion-ally ex-pen-sive. PINNs of-fer a gen-er-al-iz-able and ef-fi-cient al- 
+Overfull \hbox (0.5434pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10 em-bed-ding phys-i-cal laws into neu-ral net-works, PIML ap-proaches en-sure ad-her-ence to 
+ []
+
+
+Overfull \hbox (17.76576pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10 con-ser-va-tion prin-ci-ples and other con-straints, en-hanc-ing both ac-cu-racy and in-ter-pretabil- 
+ []
+
+
+Overfull \hbox (2.29341pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10 ity. The ob-jec-tive is to de-velop mod-els that com-bine the pre-ci-sion of nu-mer-i-cal meth- 
+ []
+
+
+Overfull \hbox (3.34903pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10 ods with the ef-fi-ciency and scal-a-bil-ity of ma-chine learn-ing, paving the way for new in- 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Overfull \hbox (7.57117pt too wide) in paragraph at lines 224--225
+Overfull \hbox (15.21011pt too wide) in paragraph at lines 89--90
+[]\OT1/cmr/m/n/10 Through this syn-the-sis of clas-si-cal me-chan-ics, nu-mer-i-cal meth-ods, and mod-ern ma- 
+ []
+
+
+Overfull \hbox (9.46011pt too wide) in paragraph at lines 89--90
+\OT1/cmr/m/n/10 chine learn-ing, this work seeks to ad-vance our un-der-stand-ing of ce-les-tial me-chan-ics and 
+ []
+
+
+Overfull \hbox (5.70346pt too wide) in paragraph at lines 92--92
+[]\OT1/cmr/bx/n/10 Three-body prob-lem | From New-ton to su-per-com-puter plus ma- 
+ []
+
+
+Package natbib Warning: Citation `Liao_2022' on page 3 undefined on input line 93.
+
+
+Overfull \hbox (11.94623pt too wide) in paragraph at lines 93--94
+[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) iden-ti-fies pe-ri-odic or-bits within three-body sys-tems with data-driven meth-ods. 
+ []
+
+
+Overfull \hbox (4.51558pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 His-tor-i-cally, only a lim-ited num-ber of such or-bits were dis-cov-ered over three cen-turies. 
+ []
+
+
+Overfull \hbox (4.59904pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 The au-thors in-tro-duce an in-no-va-tive ap-proach that lever-ages ma-chine learn-ing, specif- 
+ []
+
+
+Overfull \hbox (1.37683pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 i-cally ar-ti-fi-cial neu-ral net-works (ANNs), to sys-tem-at-i-cally un-cover pla-nar pe-ri-odic or- 
+ []
+
+
+Overfull \hbox (2.29352pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 bits for three-body sys-tems with ar-bi-trary masses. By start-ing with a known pe-ri-odic 
+ []
+
+
+Overfull \hbox (5.7102pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 or-bit, their method it-er-a-tively ex-pands the set of known or-bits, ef-fec-tively train-ing the 
+ []
+
+
+Overfull \hbox (24.68239pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 ANN to pre-dict ac-cu-rate pe-ri-odic or-bits across var-i-ous mass con-fig-u-ra-tions. This ap-proach 
+ []
+
+
+Overfull \hbox (4.2102pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 not only broad-ens the un-der-stand-ing of three-body dy-nam-ics but also un-der-scores the 
+ []
+
+
+Overfull \hbox (9.09914pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 po-ten-tial of com-bin-ing high-performance com-put-ing with ar-ti-fi-cial in-tel-li-gence to tackle 
+ []
+
+
+Overfull \hbox (16.57278pt too wide) in paragraph at lines 94--94
+[]\OT1/cmr/bx/n/10 Newton vs the ma-chine: solv-ing the chaotic three-body prob-lem us- 
+ []
+
+
+Package natbib Warning: Citation `Breen_2020' on page 3 undefined on input line 95.
+
+
+Overfull \hbox (10.16843pt too wide) in paragraph at lines 95--96
+[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) ad-dress the com-pu-ta-tional chal-lenges in-her-ent in solv-ing the three-body prob- 
+ []
+
+
+Overfull \hbox (1.21016pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 lem due to its chaotic na-ture. Tra-di-tional nu-mer-i-cal meth-ods of-ten de-mand ex-ten-sive 
+ []
+
+
+Overfull \hbox (0.76567pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 com-pu-ta-tional re-sources and time to achieve ac-cu-rate so-lu-tions. To mit-i-gate this, the 
+ []
+
+
+Overfull \hbox (7.73792pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 au-thors trained a deep ar-ti-fi-cial neu-ral net-work (ANN) on a dataset of so-lu-tions gen-er- 
+ []
+
+
+Overfull \hbox (9.96016pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 ated by high-precision nu-mer-i-cal in-te-gra-tors. Their find-ings demon-strate that the ANN 
+ []
+
+
+Overfull \hbox (1.9046pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 can pre-dict the mo-tions of three-body sys-tems over bounded time in-ter-vals with fixed 
+ []
+
+
+Overfull \hbox (5.76576pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 com-pu-ta-tional costs, achiev-ing speeds up to 100 mil-lion times faster than con-ven-tional 
+ []
+
+
+Overfull \hbox (9.29353pt too wide) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 solvers. This ap-proach holds promise for ef-fi-ciently sim-u-lat-ing com-plex many-body sys- 
+ []
+
+
+Overfull \hbox (10.64917pt too wide) in paragraph at lines 96--96
+[]\OT1/cmr/bx/n/10 Physics In-formed Deep Learn-ing: Data-driven So-lu-tions of Non-lin- 
+ []
+
+
+Package natbib Warning: Citation `raissi2017physicsinformeddeeplearning' on page 3 undefined on input line 97.
+
+
+Overfull \hbox (10.58502pt too wide) in paragraph at lines 97--98
+[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 ?\OT1/cmr/m/n/10 ) in-tro-duces Physics-Informed Neu-ral Net-works (PINNs) as a novel ap-proach to 
+ []
+
+
+Overfull \hbox (8.62688pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 solv-ing prob-lems gov-erned by par-tial dif-fer-en-tial equa-tions (PDEs). PINNs in-cor-po-rate 
+ []
+
+
+Overfull \hbox (10.07118pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 the un-der-ly-ing phys-i-cal laws, ex-pressed as PDEs, di-rectly into the neu-ral net-work's loss 
+ []
+
+
+Overfull \hbox (17.43242pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 func-tion, en-abling them to learn so-lu-tions while re-spect-ing the gov-ern-ing equa-tions. This 
+ []
+
+
+Overfull \hbox (22.01572pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 elim-i-nates the need for la-beled data, re-ly-ing in-stead on the resid-u-als of the PDEs to guide 
+ []
+
+
+Overfull \hbox (6.18242pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 the train-ing. The study demon-strates the ap-pli-ca-tion of PINNs to a va-ri-ety of for-ward 
+ []
+
+
+Overfull \hbox (20.87682pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 and in-verse prob-lems, such as fluid dy-nam-ics and heat con-duc-tion. The frame-work is par- 
+ []
+
+
+Overfull \hbox (14.96024pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 tic-u-larly use-ful for prob-lems with lim-ited ob-ser-va-tional data or where tra-di-tional nu-mer- 
+ []
+
+
+Overfull \hbox (7.54346pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 i-cal solvers are com-pu-ta-tion-ally ex-pen-sive. PINNs of-fer a gen-er-al-iz-able and ef-fi-cient al- 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Overfull \hbox (7.57117pt too wide) in paragraph at lines 100--101
 []\OT1/cmr/m/n/10 On a closed sys-tem, the gov-ern-ing laws are de-scribed by the min-i-mal ac-tion prin- 
  []
 
 
-Overfull \hbox (9.46pt too wide) in paragraph at lines 224--225
+Overfull \hbox (9.46pt too wide) in paragraph at lines 100--101
 \OT1/cmr/m/n/10 ci-ple. The cur-rent work ad-heres to this prin-ci-ple as it de-rives the Euler-Lagrange equa- 
  []
 
 
-Overfull \hbox (5.57127pt too wide) in paragraph at lines 224--225
+Overfull \hbox (5.57127pt too wide) in paragraph at lines 100--101
 \OT1/cmr/m/n/10 tions, from which we can in-duce a Leg-en-dre trans-form that turns into the hamil-to-nian 
  []
 
 
-Overfull \hbox (2.61285pt too wide) in paragraph at lines 229--231
+Overfull \hbox (2.61285pt too wide) in paragraph at lines 105--107
 \OT1/cmr/m/n/10 In this case, we ad-here to the clas-si-cal grav-i-ta-tional po-ten-tial func-tion for the $\OML/cmm/m/it/10 N$ \OT1/cmr/m/n/10 bod- 
  []
 
 
-Overfull \hbox (12.57831pt too wide) in paragraph at lines 236--237
+Overfull \hbox (12.57831pt too wide) in paragraph at lines 112--113
 []$\OML/cmm/m/it/10 G$ \OT1/cmr/m/n/10 be-ing the grav-i-ta-tional con-stant, for each carte-sian $\OT1/cmr/bx/n/10 p[]$ \OT1/cmr/m/n/10 and $\OT1/cmr/bx/n/10 r[]$ \OT1/cmr/m/n/10 as func-tions of the 
  []
 
 
-Overfull \hbox (10.77943pt too wide) in paragraph at lines 236--237
+Overfull \hbox (10.77943pt too wide) in paragraph at lines 112--113
 \OT1/cmr/m/n/10 gen-er-al-ized co-or-di-nates $\OT1/cmr/bx/n/10 p$ \OT1/cmr/m/n/10 and $\OT1/cmr/bx/n/10 q$ \OT1/cmr/m/n/10 re-spec-tively within our phase space $\OMS/cmsy/m/n/10 P$\OT1/cmr/m/n/10 . We also re-mind 
  []
 
 
-Overfull \hbox (7.79341pt too wide) in paragraph at lines 238--239
+Overfull \hbox (7.79341pt too wide) in paragraph at lines 114--115
 []\OT1/cmr/m/n/10 Hence, we are look-ing for a uni-ver-sal ap-prox-i-ma-tor that can re-sem-ble the prop-er- 
  []
 
-./agujournaltemplate.tex:248: Misplaced alignment tab character &.
-l.248     \mathcal{L}_{PDE} &
+./agujournaltemplate.tex:124: Misplaced alignment tab character &.
+l.124     \mathcal{L}_{PDE} &
                              = \norm{\int_\mathcal{P} \dot{\mathbf{p}} + \na...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -540,61 +796,61 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./agujournaltemplate.tex:248: LaTeX Error: There's no line here to end.
+./agujournaltemplate.tex:124: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.248 ..._\theta d(\boldsymbol{\lambda} (t))}^2 \\
+l.124 ..._\theta d(\boldsymbol{\lambda} (t))}^2 \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./agujournaltemplate.tex:248: Missing $ inserted.
+./agujournaltemplate.tex:124: Missing $ inserted.
 <inserted text> 
                 $
-l.248 ..._\theta d(\boldsymbol{\lambda} (t))}^2 \\
+l.124 ..._\theta d(\boldsymbol{\lambda} (t))}^2 \\
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./agujournaltemplate.tex:248: Display math should end with $$.
+./agujournaltemplate.tex:124: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.248 ..._\theta d(\boldsymbol{\lambda} (t))}^2 \\
+l.124 ..._\theta d(\boldsymbol{\lambda} (t))}^2 \\
                                                   
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-./agujournaltemplate.tex:249: LaTeX Error: Bad math environment delimiter.
+./agujournaltemplate.tex:125: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.249 \end{equation}
+l.125 \end{equation}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./agujournaltemplate.tex:249: You can't use `\eqno' in vertical mode.
+./agujournaltemplate.tex:125: You can't use `\eqno' in vertical mode.
 \veqno ->\@kernel@eqno 
                        \aftergroup \ignorespaces 
-l.249 \end{equation}
+l.125 \end{equation}
                     
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./agujournaltemplate.tex:249: Missing $ inserted.
+./agujournaltemplate.tex:125: Missing $ inserted.
 <inserted text> 
                 $
-l.249 \end{equation}
+l.125 \end{equation}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -602,166 +858,166 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./agujournaltemplate.tex:249: Display math should end with $$.
+./agujournaltemplate.tex:125: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.249 \end{equation}
+l.125 \end{equation}
                     
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-Overfull \hbox (2.09903pt too wide) in paragraph at lines 252--253
+Overfull \hbox (2.09903pt too wide) in paragraph at lines 128--129
 []\OT1/cmr/m/n/10 The ini-tial con-di-tions will be de-fined ran-domly for each it-er-a-tion. A rect-an-gu-lar 
  []
 
 
-Overfull \hbox (9.50183pt too wide) in paragraph at lines 252--253
+Overfull \hbox (9.50183pt too wide) in paragraph at lines 128--129
 \OT1/cmr/m/n/10 ge-om-e-try is gen-er-ally cho-sen to be our prob-lem ge-om-e-try within the $\U/msb/m/n/10 R[]$ \OT1/cmr/m/n/10 sim-u-la-tion. Fi- 
  []
 
 
-Overfull \hbox (11.0156pt too wide) in paragraph at lines 257--258
+Overfull \hbox (11.0156pt too wide) in paragraph at lines 133--134
 []\OT1/cmr/m/n/10 The present work's hy-poth-e-sis is the ex-is-tence of some func-tion that em-bod-ies the 
  []
 
-[3]
-Overfull \hbox (12.68231pt too wide) in paragraph at lines 265--266
+[4]
+Overfull \hbox (12.68231pt too wide) in paragraph at lines 141--142
 []\OT1/cmr/m/n/10 This work presents a novel ap-proach to solv-ing the N-body prob-lem us-ing physics- 
  []
 
 
-Overfull \hbox (6.4603pt too wide) in paragraph at lines 265--266
+Overfull \hbox (6.4603pt too wide) in paragraph at lines 141--142
 \OT1/cmr/m/n/10 informed neu-ral net-works. By in-cor-po-rat-ing the Hamil-ton's equa-tions for grav-i-ta-tional 
  []
 
 
-Overfull \hbox (6.04343pt too wide) in paragraph at lines 265--266
+Overfull \hbox (6.04343pt too wide) in paragraph at lines 141--142
 \OT1/cmr/m/n/10 in-ter-ac-tions di-rectly into the neu-ral net-work ar-chi-tec-ture through the loss func-tion, we 
  []
 
 
-Overfull \hbox (7.65457pt too wide) in paragraph at lines 265--266
+Overfull \hbox (7.65457pt too wide) in paragraph at lines 141--142
 \OT1/cmr/m/n/10 have demon-strated that it is pos-si-ble to cre-ate a uni-ver-sal ap-prox-i-ma-tor that pre-serves 
  []
 
 
-Overfull \hbox (21.09906pt too wide) in paragraph at lines 265--266
+Overfull \hbox (21.09906pt too wide) in paragraph at lines 141--142
 \OT1/cmr/m/n/10 the fun-da-men-tal phys-i-cal prop-er-ties of ce-les-tial me-chan-i-cal sys-tems, in-clud-ing en-ergy con- 
  []
 
 
-Overfull \hbox (10.84894pt too wide) in paragraph at lines 267--268
+Overfull \hbox (10.84894pt too wide) in paragraph at lines 143--144
 []\OT1/cmr/m/n/10 Our re-sults show that the physics-informed neu-ral net-work ap-proach of-fers sev-eral 
  []
 
 
-Overfull \hbox (9.37682pt too wide) in paragraph at lines 267--268
+Overfull \hbox (9.37682pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 ad-van-tages over tra-di-tional nu-mer-i-cal solvers. First, once trained, the net-work pro-vides 
  []
 
 
-Overfull \hbox (3.79353pt too wide) in paragraph at lines 267--268
+Overfull \hbox (3.79353pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 fast in-fer-ence times for dif-fer-ent ini-tial con-di-tions with-out re-quir-ing ad-di-tional nu-mer- 
  []
 
 
-Overfull \hbox (15.26573pt too wide) in paragraph at lines 267--268
+Overfull \hbox (15.26573pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 i-cal in-te-gra-tion. Sec-ond, the built-in phys-i-cal con-straints en-sure that the so-lu-tions main- 
  []
 
 
-Overfull \hbox (15.09897pt too wide) in paragraph at lines 267--268
+Overfull \hbox (15.09897pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 tain es-sen-tial con-ser-va-tion laws, which is cru-cial for long-term sta-bil-ity pre-dic-tions in ce- 
  []
 
 
-Overfull \hbox (6.34898pt too wide) in paragraph at lines 267--268
+Overfull \hbox (6.34898pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 les-tial me-chan-ics with-out an spe-cial-ized nu-mer-i-cal solver cre-at-ing a dataset for a data- 
  []
 
 
-Overfull \hbox (23.18236pt too wide) in paragraph at lines 269--270
+Overfull \hbox (23.18236pt too wide) in paragraph at lines 145--146
 []\OT1/cmr/m/n/10 The com-par-i-son with con-ven-tional nu-mer-i-cal solvers demon-strates that our ap-proach 
  []
 
 
-Overfull \hbox (9.54353pt too wide) in paragraph at lines 269--270
+Overfull \hbox (9.54353pt too wide) in paragraph at lines 145--146
 \OT1/cmr/m/n/10 achieves com-pa-ra-ble ac-cu-racy while pro-vid-ing sig-nif-i-cant com-pu-ta-tional ef-fi-ciency gains 
  []
 
 
-Overfull \hbox (4.71024pt too wide) in paragraph at lines 269--270
+Overfull \hbox (4.71024pt too wide) in paragraph at lines 145--146
 \OT1/cmr/m/n/10 for re-peated eval-u-a-tions. This is par-tic-u-larly valu-able for ap-pli-ca-tions re-quir-ing mul-ti- 
  []
 
 
-Overfull \hbox (8.76575pt too wide) in paragraph at lines 269--270
+Overfull \hbox (8.76575pt too wide) in paragraph at lines 145--146
 \OT1/cmr/m/n/10 ple sim-u-la-tions with vary-ing ini-tial con-di-tions, such as space mis-sion plan-ning or as-tro- 
  []
 
 
-Overfull \hbox (8.04349pt too wide) in paragraph at lines 274--275
+Overfull \hbox (8.04349pt too wide) in paragraph at lines 150--151
 []\OT1/cmr/m/n/10 Incorporating ad-di-tional phys-i-cal con-straints such as an-gu-lar mo-men-tum con-ser- 
  []
 
 
-Overfull \hbox (6.21013pt too wide) in paragraph at lines 275--276
+Overfull \hbox (6.21013pt too wide) in paragraph at lines 151--152
 []\OT1/cmr/m/n/10 Developing adap-tive train-ing strate-gies for dif-fer-ent mass ra-tios and or-bital con- 
  []
 
 
-Overfull \hbox (14.32126pt too wide) in paragraph at lines 276--277
+Overfull \hbox (14.32126pt too wide) in paragraph at lines 152--153
 []\OT1/cmr/m/n/10 Investigating the net-work's ca-pa-bil-ity to iden-tify and clas-sify dif-fer-ent types of or- 
  []
 
 
-Overfull \hbox (14.57123pt too wide) in paragraph at lines 279--280
+Overfull \hbox (14.57123pt too wide) in paragraph at lines 155--156
 []\OT1/cmr/m/n/10 In con-clu-sion, this work demon-strates the po-ten-tial of physics-informed neu-ral net- 
  []
 
 
-Overfull \hbox (21.57126pt too wide) in paragraph at lines 279--280
+Overfull \hbox (21.57126pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/10 works as a pow-er-ful tool for ce-les-tial me-chan-ics, of-fer-ing a bal-ance be-tween com-pu-ta-tional 
  []
 
 
-Overfull \hbox (15.2657pt too wide) in paragraph at lines 279--280
+Overfull \hbox (15.2657pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/10 ef-fi-ciency and phys-i-cal ac-cu-racy. The ap-proach opens new pos-si-bil-i-ties for study-ing com- 
  []
 
 
-Overfull \hbox (5.82132pt too wide) in paragraph at lines 279--280
+Overfull \hbox (5.82132pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/10 plex grav-i-ta-tional sys-tems and could com-ple-ment ex-ist-ing nu-mer-i-cal meth-ods in as-tro- 
  []
 
 
-./agujournaltemplate.tex:400: LaTeX Error: Environment definition undefined.
+./agujournaltemplate.tex:160: LaTeX Error: Environment definition undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.400 \begin{definition}
+l.160 \begin{definition}
                         [The Action Integral]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (19.65448pt too wide) in paragraph at lines 400--402
+Overfull \hbox (19.65448pt too wide) in paragraph at lines 160--162
 []\OT1/cmr/m/n/10 [The Ac-tion In-te-gral] The ac-tion is a scalar quan-tity de-scrib-ing the bal-ance be-tween 
  []
 
 
-Overfull \hbox (20.23792pt too wide) in paragraph at lines 400--402
+Overfull \hbox (20.23792pt too wide) in paragraph at lines 160--162
 \OT1/cmr/m/n/10 the ki-netic and po-ten-tial en-ergy in a phys-i-cal sys-tem. It can be de-scribed as fol-lows given 
  []
 
-./agujournaltemplate.tex:404: Undefined control sequence.
+./agujournaltemplate.tex:164: Undefined control sequence.
 <argument>  A\left [ \matbf 
                             {q}(t) \right ] = \int _{t_1}^{t_2} \mathcal {L}...
-l.404     \end{align*}
+l.164     \end{align*}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -769,10 +1025,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./agujournaltemplate.tex:404: Undefined control sequence.
+./agujournaltemplate.tex:164: Undefined control sequence.
 <argument>  A\left [ \matbf 
                             {q}(t) \right ] = \int _{t_1}^{t_2} \mathcal {L}...
-l.404     \end{align*}
+l.164     \end{align*}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -781,46 +1037,46 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./agujournaltemplate.tex:405: LaTeX Error: \begin{document} ended by \end{definition}.
+./agujournaltemplate.tex:165: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.405 \end{definition}
+l.165 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./agujournaltemplate.tex:413: LaTeX Error: Environment definition undefined.
+./agujournaltemplate.tex:173: LaTeX Error: Environment definition undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.413 \begin{definition}
+l.173 \begin{definition}
                         [The Principle of Least Action]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (1.9045pt too wide) in paragraph at lines 413--415
+Overfull \hbox (1.9045pt too wide) in paragraph at lines 173--175
 []\OT1/cmr/m/n/10 [The Prin-ci-ple of Least Ac-tion] The Prin-ci-ple of Least Ac-tion states that a path 
  []
 
 
-Overfull \hbox (10.23793pt too wide) in paragraph at lines 413--415
+Overfull \hbox (10.23793pt too wide) in paragraph at lines 173--175
 \OT1/cmr/m/n/10 taken by a phys-i-cal sys-tem has a sta-tion-ary val-ues for the sys-tem's ac-tion. This means, 
  []
 
-[4]
-./agujournaltemplate.tex:417: Undefined control sequence.
+[5]
+./agujournaltemplate.tex:177: Undefined control sequence.
 <argument>  \delta A\left [ \matbf 
                                    {q}(t) \right ] = 0 
-l.417     \end{align*}
+l.177     \end{align*}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -828,10 +1084,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./agujournaltemplate.tex:417: Undefined control sequence.
+./agujournaltemplate.tex:177: Undefined control sequence.
 <argument>  \delta A\left [ \matbf 
                                    {q}(t) \right ] = 0 
-l.417     \end{align*}
+l.177     \end{align*}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -839,10 +1095,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./agujournaltemplate.tex:422: Undefined control sequence.
+./agujournaltemplate.tex:182: Undefined control sequence.
 <argument>  \delta A\left [ \matbf 
                                    {q}(t) \right ] &= \delta \int _{t_1}^{t_...
-l.422     \end{align*}
+l.182     \end{align*}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -850,10 +1106,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./agujournaltemplate.tex:422: Undefined control sequence.
+./agujournaltemplate.tex:182: Undefined control sequence.
 <argument>  \delta A\left [ \matbf 
                                    {q}(t) \right ] &= \delta \int _{t_1}^{t_...
-l.422     \end{align*}
+l.182     \end{align*}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -862,70 +1118,70 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (5.27956pt too wide) in paragraph at lines 422--424
+Overfull \hbox (5.27956pt too wide) in paragraph at lines 182--184
 \OT1/cmr/m/n/10 Given the con-di-tions of the Least Ac-tion Prin-ci-ple, the first term van-ishes, leav-ing the 
  []
 
 
-./agujournaltemplate.tex:427: LaTeX Error: \begin{document} ended by \end{definition}.
+./agujournaltemplate.tex:187: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.427 \end{definition}
+l.187 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (2.40457pt too wide) in paragraph at lines 430--431
+Overfull \hbox (2.40457pt too wide) in paragraph at lines 190--191
 []\OT1/cmr/m/n/10 We first in-tro-duce a Leg-en-dre tran-for-ma-tion to the La-grangian given the fol-low- 
  []
 
 
-Overfull \hbox (8.98238pt too wide) in paragraph at lines 449--450
+Overfull \hbox (8.98238pt too wide) in paragraph at lines 209--210
 []\OT1/cmr/m/n/10 The neg-a-tive of this trans-for-ma-tion ($\OMS/cmsy/m/n/10 ^^@[]$\OT1/cmr/m/n/10 ) is the hamil-to-nian $\OMS/cmsy/m/n/10 H$\OT1/cmr/m/n/10 , if we re-place it in 
  []
 
 
-./agujournaltemplate.tex:455: LaTeX Error: Environment definition undefined.
+./agujournaltemplate.tex:215: LaTeX Error: Environment definition undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 \begin{definition}
+l.215 \begin{definition}
                         [Properties of the Hamiltonian]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (11.40468pt too wide) in paragraph at lines 455--457
+Overfull \hbox (11.40468pt too wide) in paragraph at lines 215--217
 []\OT1/cmr/m/n/10 [Properties of the Hamil-to-nian] The hamil-to-nian for-mu-la-tion leads to all the foun- 
  []
 
 
-Overfull \hbox (2.82126pt too wide) in paragraph at lines 459--462
+Overfull \hbox (2.82126pt too wide) in paragraph at lines 219--222
 \OT1/cmr/m/n/10 This means that the to-tal en-ergy of a closed hamil-to-nian sys-tem is con-served through 
  []
 
 
-Overfull \hbox (29.18234pt too wide) in paragraph at lines 459--462
+Overfull \hbox (29.18234pt too wide) in paragraph at lines 219--222
 \OT1/cmr/m/n/10 time. More-over, if we com-pute the di-ver-gence of a ve-loc-ity field de-scribed within the hamil- 
  []
 
-[5]
+[6]
 
-./agujournaltemplate.tex:470: LaTeX Error: \begin{document} ended by \end{definition}.
+./agujournaltemplate.tex:230: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.470 \end{definition}
+l.230 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -934,7 +1190,7 @@ or  <return>  to continue without it.
 
 Package natbib Warning: There were undefined citations.
 
-[6] (./agujournaltemplate.aux)
+[7] (./agujournaltemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -946,18 +1202,18 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 5443 strings out of 476076
- 82234 string characters out of 5793775
+ 5444 strings out of 476076
+ 82242 string characters out of 5793775
  1944187 words of memory out of 5000000
- 27439 multiletter control sequences out of 15000+600000
+ 27440 multiletter control sequences out of 15000+600000
  568262 words of font info for 74 fonts, out of 8000000 for 9000
  20 hyphenation exceptions out of 8191
- 72i,12n,79p,939b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,79p,1391b,287s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on agujournaltemplate.pdf (6 pages, 237900 bytes).
+Output written on agujournaltemplate.pdf (7 pages, 242753 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
