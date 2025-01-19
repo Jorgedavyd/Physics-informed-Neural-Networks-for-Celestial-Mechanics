@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex agujournaltemplate"] 1737297019.24855 "agujournaltemplate.aux" "agujournaltemplate.bbl" "agujournaltemplate" 1737297036.44464 0
-  "./agusample.bib" 1737297022.49004 1802 91fc912f9a2190427120d99e49d00b50 ""
+["bibtex agujournaltemplate"] 1737286146.93402 "agujournaltemplate.aux" "agujournaltemplate.bbl" "agujournaltemplate" 1737288587.81923 0
+  "./agusample.bib" 1737286150.55805 4820 ea09a1e3b82597a637b2bb2946b1a2e9 ""
   "/usr/share/texmf-dist/bibtex/bst/apacite/apacite.bst" 1736268207 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "agujournaltemplate.aux" 1737297036.26671 2056 2fd423c8471cbd8c1ca009049f90390c "pdflatex"
+  "agujournaltemplate.aux" 1737288587.65801 2800 4a8494c2a6a3725360b78002a6e8aec5 "pdflatex"
   (generated)
   "agujournaltemplate.bbl"
   "agujournaltemplate.blg"
   (rewritten before read)
-["pdflatex"] 1737297035.90029 "agujournaltemplate.tex" "agujournaltemplate.pdf" "agujournaltemplate" 1737297036.44477 2
+["pdflatex"] 1737288587.33879 "agujournaltemplate.tex" "agujournaltemplate.pdf" "agujournaltemplate" 1737288587.81942 2
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1736268207 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1736268207 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -42,6 +42,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti9.tfm" 1736268207 1476 cccc6cc4935c18ec3d5623b77ecb8b74 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1736268207 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm" 1736268207 764 c98a2af25c99b73a368cf7336e255190 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb" 1736268207 34793 87a84b12f86dfd35a1cf1bb142b75602 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1736268207 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1736268207 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb" 1736268207 32007 e8fa0078355f39467039935974716569 ""
@@ -64,6 +65,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1736268207 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1736268207 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1736268207 29078 718ea4567ceff944262b0f5b0800e1d9 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb" 1736268207 39386 0bb525d495ceab21fe797301a586e0d7 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1736268207 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1736268207 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty" 1736268207 7734 b98cbb34c81f667027c1e3ebdbfce34b ""
@@ -111,13 +113,13 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1736268207 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1736268207 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1737133826.54002 5318467 8236939515598d005dfbcc2e1a40f206 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1737133792 7112998 7bef9b7a9270f4c6974cc998689ae1e9 ""
-  "agujournal2019.cls" 1737220003.31 40688 b442a0d4e8a299883855595037ff6651 ""
-  "agujournaltemplate.aux" 1737297036.26671 2056 2fd423c8471cbd8c1ca009049f90390c "pdflatex"
-  "agujournaltemplate.bbl" 1737297019.3067 3079 2f9d768183ce7fe72c4eec5066c839fb "bibtex agujournaltemplate"
-  "agujournaltemplate.tex" 1737297035.00671 21041 542e60a642df43c14d30956f8b31a60f ""
-  "trackchanges.sty" 1737220003.31334 26287 09689e5e9db973d136f0537b8570fadf ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1737111138.53132 5318467 8236939515598d005dfbcc2e1a40f206 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1737111114 7112999 a088e0b848ee72b78c3e0fdf06374499 ""
+  "agujournal2019.cls" 1731367162 40688 b442a0d4e8a299883855595037ff6651 ""
+  "agujournaltemplate.aux" 1737288587.65801 2800 4a8494c2a6a3725360b78002a6e8aec5 "pdflatex"
+  "agujournaltemplate.bbl" 1737286146.97807 7476 efd870ad05ff8e138a46f5b45c3512d8 "bibtex agujournaltemplate"
+  "agujournaltemplate.tex" 1737288587.25468 21486 1aeef65f57f60407d6eca671c756945d ""
+  "trackchanges.sty" 1731367162 26287 09689e5e9db973d136f0537b8570fadf ""
   (generated)
   "agujournaltemplate.aux"
   "agujournaltemplate.log"

@@ -33,6 +33,135 @@ Breen, P\BPBI G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Chenciner%
+\ \BBA {} Montgomery%
+}{%
+Chenciner%
+\ \BBA {} Montgomery%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+chenciner2000}
+\APACinsertmetastar {%
+chenciner2000}%
+\begin{APACrefauthors}%
+Chenciner, A.%
+\BCBT {}\ \BBA {} Montgomery, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A remarkable periodic solution of the three-body problem in the case of equal masses} {A remarkable periodic solution of the three-body problem in the case of equal masses}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annals of Mathematics}{152}{3}{881--901}.
+\newblock
+\APACrefnote{Discovery of the figure-eight orbit in the three-body problem}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Euler%
+}{%
+Euler%
+}{%
+{\protect \APACyear {1749}}%
+}]{%
+euler1749}
+\APACinsertmetastar {%
+euler1749}%
+\begin{APACrefauthors}%
+Euler, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1749}.
+\newblock
+\APACrefbtitle {Considerations sur le mouvement des corps célestes} {Considerations sur le mouvement des corps célestes}.
+\newblock
+\APACaddressPublisher{Berlin}{Royal Prussian Academy of Sciences}.
+\newblock
+\APACrefnote{Presented to the Berlin Academy of Sciences}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lagrange%
+}{%
+Lagrange%
+}{%
+{\protect \APACyear {1772}}%
+}]{%
+lagrange1772}
+\APACinsertmetastar {%
+lagrange1772}%
+\begin{APACrefauthors}%
+Lagrange, J\BHBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1772}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Essai sur le problème des trois corps} {Essai sur le problème des trois corps}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Miscellanea Taurinensia}{4}{}{175--331}.
+\newblock
+\APACrefnote{Published by the Turin Academy of Sciences}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Laskar%
+}{%
+Laskar%
+}{%
+{\protect \APACyear {1994}}%
+}]{%
+laskar1994}
+\APACinsertmetastar {%
+laskar1994}%
+\begin{APACrefauthors}%
+Laskar, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1994}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Large-scale chaos and the stability of the solar system} {Large-scale chaos and the stability of the solar system}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{361}{}{608--612}.
+\newblock
+\APACrefnote{Study on the chaotic behavior of planetary systems and three-body interactions}
+\newblock
+\begin{APACrefDOI} \doi{10.1038/361608a0} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Li%
+\ \protect \BOthers {.}}{%
+Li%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+li2023physicsinformedneuraloperatorlearning}
+\APACinsertmetastar {%
+li2023physicsinformedneuraloperatorlearning}%
+\begin{APACrefauthors}%
+Li, Z.%
+, Zheng, H.%
+, Kovachki, N.%
+, Jin, D.%
+, Chen, H.%
+, Liu, B.%
+\BDBL {}Anandkumar, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+\APACrefbtitle {Physics-Informed Neural Operator for Learning Partial Differential Equations.} {Physics-informed neural operator for learning partial differential equations.}
+\newblock
+\begin{APACrefURL} \url{https://arxiv.org/abs/2111.03794} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Liao%
 , Li%
 \BCBL {}\ \BBA {} Yang%
@@ -67,21 +196,45 @@ Newton%
 }{%
 Newton%
 }{%
-{\protect \APACyear {1833}}%
+{\protect \APACyear {1687}}%
 }]{%
-newton1833philosophiae}
+newton1683}
 \APACinsertmetastar {%
-newton1833philosophiae}%
+newton1683}%
 \begin{APACrefauthors}%
 Newton, I.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYear{1833}.
+\APACrefYear{1687}.
 \newblock
-\APACrefbtitle {Philosophiae naturalis principia mathematica} {Philosophiae naturalis principia mathematica}\ (\BVOL~1).
+\APACrefbtitle {{Philosophiae Naturalis Principia Mathematica.}} {{Philosophiae Naturalis Principia Mathematica.}}
 \newblock
-\APACaddressPublisher{}{G. Brookman}.
+\begin{APACrefDOI} \doi{10.3931/e-rara-440} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Poincar\'e%
+}{%
+Poincar\'e%
+}{%
+{\protect \APACyear {1892--1899}}%
+}]{%
+poincare1892}
+\APACinsertmetastar {%
+poincare1892}%
+\begin{APACrefauthors}%
+Poincar\'e, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1892--1899}.
+\newblock
+\APACrefbtitle {Les M\'ethodes Nouvelles de la M\'ecanique C\'eleste} {Les m\'ethodes nouvelles de la m\'ecanique c\'eleste}.
+\newblock
+\APACaddressPublisher{Paris}{Gauthier-Villars}.
+\newblock
+\APACrefnote{Published in three volumes}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -108,6 +261,30 @@ Raissi, M.%
 \APACrefbtitle {Physics Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear Partial Differential Equations.} {Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations.}
 \newblock
 \begin{APACrefURL} \url{https://arxiv.org/abs/1711.10561} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sundman%
+}{%
+Sundman%
+}{%
+{\protect \APACyear {1912}}%
+}]{%
+sundman1912}
+\APACinsertmetastar {%
+sundman1912}%
+\begin{APACrefauthors}%
+Sundman, K\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1912}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {M\'emoire sur le probl\`eme des trois corps} {M\'emoire sur le probl\`eme des trois corps}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Acta Mathematica}{36}{}{105--179}.
+\newblock
+\APACrefnote{Sundman's proof of a convergent series solution for the three-body problem}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

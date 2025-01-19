@@ -12,49 +12,45 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: agusample.bib
-Warning--I didn't find a database entry for "euler"
-Warning--I didn't find a database entry for "Lagrange"
-Warning--I didn't find a database entry for "Poincare"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 4 entries,
+You've used 11 entries,
             6951 wiz_defined-function locations,
-            1305 strings with 11640 characters,
-and the built_in function-call counts, 8461 in all, are:
-= -- 1005
-> -- 72
-< -- 445
-+ -- 460
-- -- 8
-* -- 577
-:= -- 1661
-add.period$ -- 16
-call.type$ -- 4
-change.case$ -- 72
+            1351 strings with 12944 characters,
+and the built_in function-call counts, 20374 in all, are:
+= -- 2461
+> -- 162
+< -- 998
++ -- 1011
+- -- 22
+* -- 1327
+:= -- 3846
+add.period$ -- 43
+call.type$ -- 11
+change.case$ -- 191
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 215
-empty$ -- 321
-format.name$ -- 119
-if$ -- 1539
+cite$ -- 22
+duplicate$ -- 519
+empty$ -- 828
+format.name$ -- 271
+if$ -- 3815
 int.to.chr$ -- 0
-int.to.str$ -- 12
+int.to.str$ -- 33
 missing$ -- 0
-newline$ -- 113
-num.names$ -- 32
-pop$ -- 167
+newline$ -- 290
+num.names$ -- 88
+pop$ -- 429
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 48
 quote$ -- 0
-skip$ -- 452
+skip$ -- 1218
 stack$ -- 0
-substring$ -- 490
-swap$ -- 126
-text.length$ -- 14
+substring$ -- 1087
+swap$ -- 302
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 320
+type$ -- 880
 warning$ -- 0
-while$ -- 48
+while$ -- 98
 width$ -- 0
-write$ -- 143
-(There were 3 warnings)
+write$ -- 346

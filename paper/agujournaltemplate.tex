@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\title{Physics informed Machine Learning for Celestial Mechanics: The N-body problem}
+\title{Physics informed Neural Networks for Celestial Mechanics: The N-body problem}
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -72,21 +72,29 @@ This work presents a novel approach to solving the N-body problem in celestial m
 
 \section{Introduction}
 
-The three-body problem is a cornerstone of celestial mechanics and dynamical systems, describing the motion of three masses under mutual gravitational interaction. Its significance lies not only in its applications to astrophysics but also in its foundational role in chaos theory and nonlinear dynamics. First formulated in \cite{newton1833philosophiae} (1687), the problem has challenged mathematicians and physicists for centuries due to its non-integrability.
+The three-body problem is a cornerstone of celestial mechanics and dynamical systems, describing the motion of three masses under mutual gravitational interaction. Its significance lies not only in its applications to astrophysics but also in its foundational role in chaos theory and nonlinear dynamics. First formulated by \cite{newton1683}, the problem has challenged mathematicians and physicists for centuries due to its non-integrability.
 
-Initial efforts to address the three-body problem employed analytical methods. Leonhard Euler and Joseph-Louis Lagrange, in the 18th century, derived specific solutions for simplified cases, such as collinear configurations \cite{euler} (Euler, 1765) and equilateral triangle configurations \cite{Lagrange}(Lagrange, 1772). These solutions revealed equilibrium points—now known as Eulerian and Lagrangian points—and their stability properties.
+Initial efforts to address the three-body problem employed analytical methods. \cite{euler1749} and \cite{lagrange1772}, in the 18th century, derived specific solutions for simplified cases, such as collinear configurations and equilateral triangle configurations. These solutions revealed equilibrium points—now known as Eulerian and Lagrangian points—and their stability properties.
 
-Later, Henri Poincaré demonstrated the impossibility of a general analytical solution, showing that the system's behavior is inherently chaotic and sensitive to initial conditions \cite{Poincare}(Poincaré, 1890). Poincaré’s work laid the foundation for modern chaos theory, emphasizing the necessity of numerical methods for exploring the dynamics of such systems.
+Later, \cite{poincare1892} demonstrated the impossibility of a general analytical solution, showing that the system's behavior is inherently chaotic and sensitive to initial conditions. Poincaré’s work laid the foundation for modern chaos theory, emphasizing the necessity of numerical methods for exploring the dynamics of such systems.
 
-Karl Sundman (1912) made significant progress by proving that a convergent series solution exists for the three-body problem under specific conditions, albeit impractical due to its slow convergence. Modern numerical techniques have since become the primary tool for studying the three-body problem and its generalization to N-body systems. Advances in computational methods have uncovered remarkable periodic solutions, such as the figure-eight orbit discovered by Chenciner and Montgomery (2000).
+\cite{sundman1912} made significant progress by proving that a convergent series solution exists for the three-body problem under specific conditions, albeit impractical due to its slow convergence. Modern numerical techniques have since become the primary tool for studying the three-body problem and its generalization to N-body systems. Advances in computational methods have uncovered remarkable periodic solutions, such as the figure-eight orbit discovered by \cite{chenciner2000}.
 
-Numerical approaches have also highlighted the chaotic nature of three-body interactions, where small perturbations in initial conditions can lead to vastly different trajectories (Laskar, 1994). Such findings underscore the necessity of computational precision and innovative techniques for long-term predictions.
+\cite{laskar1994} numerical approaches have also highlighted the chaotic nature of three-body interactions, where small perturbations in initial conditions can lead to vastly different trajectories. Such findings underscore the necessity of computational precision and innovative techniques for long-term predictions.
 
-Recent years have seen the rise of universal approximators, such as neural networks, in modeling complex dynamical systems. These methods leverage their capacity to approximate arbitrary functions, making them well-suited for learning the underlying physics of celestial mechanics. Zhang et al. (2020) demonstrated the utility of deep neural networks in predicting trajectories in chaotic systems, offering a data-driven complement to traditional numerical solvers.
+\cite{raissi2017physicsinformeddeeplearning} and \cite{li2023physicsinformedneuraloperatorlearning} advancements in universal approximators, particularly Physics-Informed Neural Networks (PINNs), have opened new avenues for modeling complex dynamical systems. PINNs combine the expressive power of neural networks with the rigor of physical laws, enabling them to approximate arbitrary functions while adhering to the fundamental principles of physics. This makes them uniquely suited for applications in celestial mechanics, where conservation laws such as energy, momentum, and angular momentum play a critical role in describing the dynamics of gravitational systems.
 
-The current work aims to integrate the principles of physics-informed machine learning (PIML) with the study of celestial mechanics, focusing on the N-body problem. By embedding physical laws into neural networks, PIML approaches ensure adherence to conservation principles and other constraints, enhancing both accuracy and interpretability. The objective is to develop models that combine the precision of numerical methods with the efficiency and scalability of machine learning, paving the way for new insights into the dynamics of multi-body gravitational systems.
+In the context of celestial mechanics, integrating PINNs offers the potential to revolutionize the study of the N-body problem. By embedding physical constraints directly into the network's architecture and loss functions, these models can ensure compliance with established laws while leveraging data-driven insights to capture intricate behaviors. This hybrid approach bridges the gap between traditional numerical methods and modern machine learning, addressing challenges such as scalability, computational efficiency, and long-term stability of predictions.
 
-Through this synthesis of classical mechanics, numerical methods, and modern machine learning, this work seeks to advance our understanding of celestial mechanics and provide robust tools for addressing longstanding challenges in the field.
+Hence, the primary objective of this work is to develop robust models that synergize the precision of classical numerical solvers with the flexibility and scalability of machine learning techniques. By doing so, it seeks to:
+
+\begin{enumerate}
+    \item Accurately predict the trajectories and interactions of multi-body gravitational systems.
+    \item Provide interpretable insights into chaotic and near-chaotic regimes of celestial mechanics.
+    \item Explore novel phenomena and periodic solutions that remain elusive to traditional methods.
+\end{enumerate}
+
+By synthesizing principles from classical mechanics, numerical analysis, and state-of-the-art machine learning, this work aspires to advance our understanding of celestial mechanics. Ultimately, it aims to provide powerful tools for addressing longstanding challenges in the field, from the stability of planetary systems to the exploration of complex gravitational interactions in astrophysics.
 
 \section{Related Work}
 \subsection{Three-body problem — From Newton to supercomputer plus machine learning}
@@ -229,47 +237,26 @@ This defines the incompressibility ($\nabla \cdot u = 0$) of a hamiltonian syste
 
 \end{definition}
 
+\begin{acronyms}
+    \acro{PINNs}
+    Physics informed Neural Networks
+    \acro{PDEs}
+    Partial Differential Equations
+    \acro{ANNs}
+    Artificial Neural Networks
+\end{acronyms}
 
-%%%%%%%%%%%%%%
-% Acronyms
-%   \begin{acronyms}
-%   \acro{Acronym}
-%   Definition here
-%   \acro{EMOS}
-%   Ensemble model output statistics
-%   \acro{ECMWF}
-%   Centre for Medium-Range Weather Forecasts
-%   \end{acronyms}
+\begin{notation}
+    \notation{$\dot{\mathbf{a}}$} Derivative of $\mathbf{a}$ with respect to time to time.
+    \notation{$\mathbf{q}$} Vector of general real coordinates ($\mathbf{q} \in \mathbb{R}^{3N}$).
+    \notation{$\mathbf{p}$} Vector of general real momenta ($\mathbf{p} \in \mathbb{R}^{3N}$).
+    \notation{$\mathbf{q}_i$} Vector of cartesian position ($\mathbf{q}_i \in \mathbb{R}^{3}$).
+    \notation{$\mathbf{p}_i$} Vector of cartesian momenta ($\mathbf{p}_i \in \mathbb{R}^{3}$).
+    \notation{$\nabla_\mathbf{x} f$} Directional derivative/gradient of $f$ with respect to the $\mathbf{x}$.
+    \notation{$\nabla_\mathbf{x} \cdot \mathbf{F}$} Divergence of the vector field $\mathbf{F}$ with respect to the basis $\mathbf{x}$.
+    \notation{$\mathcal{S} \left[f\right]$} $ Functional $\mathcal{S}$ with inputs $f$ ($\mathcal{S} \colon f \in \mathcal{F} \to \mathbb{R}$).
+\end{notation}
 
-%
-%%%%%%%%%%%%%%
-% Notation
-%   \begin{notation}
-%   \notation{$a+b$} Notation Definition here
-%   \notation{$e=mc^2$}
-%   Equation in German-born physicist Albert Einstein's theory of special
-%  relativity that showed that the increased relativistic mass ($m$) of a
-%  body comes from the energy of motion of the body—that is, its kinetic
-%  energy ($E$)—divided by the speed of light squared ($c^2$).
-%   \end{notation}
-% Please use ONLY \cite and \citeA for reference citations.
-% \cite for parenthetical references
-% ...as shown in recent studies (Simpson et al., 2019)
-% \citeA for in-text citations
-% ...Simpson et al. (2019) have shown...
-%
-%
-%...as shown by \citeA{jskilby}.
-%...as shown by \citeA{lewin76}, \citeA{carson86}, \citeA{bartoldy02}, and \citeA{rinaldi03}.
-%...has been shown \cite{jskilbye}.
-%...has been shown \cite{lewin76,carson86,bartoldy02,rinaldi03}.
-%... \cite <i.e.>[]{lewin76,carson86,bartoldy02,rinaldi03}.
-%...has been shown by \cite <e.g.,>[and others]{lewin76}.
-%
-% apacite uses < > for prenotes and [ ] for postnotes
-% DO NOT use other cite commands (e.g., \citet, \cite, \citeyear, \citealp, etc.).
-% \nocite is okay to use to add references from your Supporting Information
-%
 \bibliography{agusample}
 
 \end{document}
