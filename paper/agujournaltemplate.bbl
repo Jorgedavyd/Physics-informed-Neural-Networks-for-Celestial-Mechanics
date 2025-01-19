@@ -1,0 +1,113 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Breen%
+, Foley%
+, Boekholt%
+\BCBL {}\ \BBA {} Zwart%
+}{%
+Breen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Breen_2020}
+\APACinsertmetastar {%
+Breen_2020}%
+\begin{APACrefauthors}%
+Breen, P\BPBI G.%
+, Foley, C\BPBI N.%
+, Boekholt, T.%
+\BCBL {}\ \BBA {} Zwart, S\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{{\APACmonth{04}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Newton versus the machine: solving the chaotic three-body problem using deep neural networks} {Newton versus the machine: solving the chaotic three-body problem using deep neural networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Notices of the Royal Astronomical Society}{494}{2}{2465–2470}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1093/mnras/staa713} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1093/mnras/staa713} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Liao%
+, Li%
+\BCBL {}\ \BBA {} Yang%
+}{%
+Liao%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+Liao_2022}
+\APACinsertmetastar {%
+Liao_2022}%
+\begin{APACrefauthors}%
+Liao, S.%
+, Li, X.%
+\BCBL {}\ \BBA {} Yang, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{{\APACmonth{10}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Three-body problem — From Newton to supercomputer plus machine learning} {Three-body problem — from newton to supercomputer plus machine learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{New Astronomy}{96}{}{101850}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.newast.2022.101850} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.newast.2022.101850} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Newton%
+}{%
+Newton%
+}{%
+{\protect \APACyear {1833}}%
+}]{%
+newton1833philosophiae}
+\APACinsertmetastar {%
+newton1833philosophiae}%
+\begin{APACrefauthors}%
+Newton, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1833}.
+\newblock
+\APACrefbtitle {Philosophiae naturalis principia mathematica} {Philosophiae naturalis principia mathematica}\ (\BVOL~1).
+\newblock
+\APACaddressPublisher{}{G. Brookman}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Raissi%
+, Perdikaris%
+\BCBL {}\ \BBA {} Karniadakis%
+}{%
+Raissi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+raissi2017physicsinformeddeeplearning}
+\APACinsertmetastar {%
+raissi2017physicsinformeddeeplearning}%
+\begin{APACrefauthors}%
+Raissi, M.%
+, Perdikaris, P.%
+\BCBL {}\ \BBA {} Karniadakis, G\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {Physics Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear Partial Differential Equations.} {Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations.}
+\newblock
+\begin{APACrefURL} \url{https://arxiv.org/abs/1711.10561} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

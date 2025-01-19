@@ -72,11 +72,11 @@ This work presents a novel approach to solving the N-body problem in celestial m
 
 \section{Introduction}
 
-The three-body problem is a cornerstone of celestial mechanics and dynamical systems, describing the motion of three masses under mutual gravitational interaction. Its significance lies not only in its applications to astrophysics but also in its foundational role in chaos theory and nonlinear dynamics. First formulated in \citep{newton1833philosophiae} (1687), the problem has challenged mathematicians and physicists for centuries due to its non-integrability.
+The three-body problem is a cornerstone of celestial mechanics and dynamical systems, describing the motion of three masses under mutual gravitational interaction. Its significance lies not only in its applications to astrophysics but also in its foundational role in chaos theory and nonlinear dynamics. First formulated in \cite{newton1833philosophiae} (1687), the problem has challenged mathematicians and physicists for centuries due to its non-integrability.
 
-Initial efforts to address the three-body problem employed analytical methods. Leonhard Euler and Joseph-Louis Lagrange, in the 18th century, derived specific solutions for simplified cases, such as collinear configurations \citep{euler} (Euler, 1765) and equilateral triangle configurations \citep{Lagrange}(Lagrange, 1772). These solutions revealed equilibrium points—now known as Eulerian and Lagrangian points—and their stability properties.
+Initial efforts to address the three-body problem employed analytical methods. Leonhard Euler and Joseph-Louis Lagrange, in the 18th century, derived specific solutions for simplified cases, such as collinear configurations \cite{euler} (Euler, 1765) and equilateral triangle configurations \cite{Lagrange}(Lagrange, 1772). These solutions revealed equilibrium points—now known as Eulerian and Lagrangian points—and their stability properties.
 
-Later, Henri Poincaré demonstrated the impossibility of a general analytical solution, showing that the system's behavior is inherently chaotic and sensitive to initial conditions \citep{Poincare}(Poincaré, 1890). Poincaré’s work laid the foundation for modern chaos theory, emphasizing the necessity of numerical methods for exploring the dynamics of such systems.
+Later, Henri Poincaré demonstrated the impossibility of a general analytical solution, showing that the system's behavior is inherently chaotic and sensitive to initial conditions \cite{Poincare}(Poincaré, 1890). Poincaré’s work laid the foundation for modern chaos theory, emphasizing the necessity of numerical methods for exploring the dynamics of such systems.
 
 Karl Sundman (1912) made significant progress by proving that a convergent series solution exists for the three-body problem under specific conditions, albeit impractical due to its slow convergence. Modern numerical techniques have since become the primary tool for studying the three-body problem and its generalization to N-body systems. Advances in computational methods have uncovered remarkable periodic solutions, such as the figure-eight orbit discovered by Chenciner and Montgomery (2000).
 
@@ -90,11 +90,11 @@ Through this synthesis of classical mechanics, numerical methods, and modern mac
 
 \section{Related Work}
 \subsection{Three-body problem — From Newton to supercomputer plus machine learning}
-\citep{Liao_2022} identifies periodic orbits within three-body systems with data-driven methods. Historically, only a limited number of such orbits were discovered over three centuries. The authors introduce an innovative approach that leverages machine learning, specifically artificial neural networks (ANNs), to systematically uncover planar periodic orbits for three-body systems with arbitrary masses. By starting with a known periodic orbit, their method iteratively expands the set of known orbits, effectively training the ANN to predict accurate periodic orbits across various mass configurations. This approach not only broadens the understanding of three-body dynamics but also underscores the potential of combining high-performance computing with artificial intelligence to tackle complex problems in celestial mechanics.
+\cite{Liao_2022} identifies periodic orbits within three-body systems with data-driven methods. Historically, only a limited number of such orbits were discovered over three centuries. The authors introduce an innovative approach that leverages machine learning, specifically artificial neural networks (ANNs), to systematically uncover planar periodic orbits for three-body systems with arbitrary masses. By starting with a known periodic orbit, their method iteratively expands the set of known orbits, effectively training the ANN to predict accurate periodic orbits across various mass configurations. This approach not only broadens the understanding of three-body dynamics but also underscores the potential of combining high-performance computing with artificial intelligence to tackle complex problems in celestial mechanics.
 \subsection{Newton vs the machine: solving the chaotic three-body problem using deep neural networks}
-\citep{Breen_2020} address the computational challenges inherent in solving the three-body problem due to its chaotic nature. Traditional numerical methods often demand extensive computational resources and time to achieve accurate solutions. To mitigate this, the authors trained a deep artificial neural network (ANN) on a dataset of solutions generated by high-precision numerical integrators. Their findings demonstrate that the ANN can predict the motions of three-body systems over bounded time intervals with fixed computational costs, achieving speeds up to 100 million times faster than conventional solvers. This approach holds promise for efficiently simulating complex many-body systems, such as those involving black-hole binaries or dense star clusters.
+\cite{Breen_2020} address the computational challenges inherent in solving the three-body problem due to its chaotic nature. Traditional numerical methods often demand extensive computational resources and time to achieve accurate solutions. To mitigate this, the authors trained a deep artificial neural network (ANN) on a dataset of solutions generated by high-precision numerical integrators. Their findings demonstrate that the ANN can predict the motions of three-body systems over bounded time intervals with fixed computational costs, achieving speeds up to 100 million times faster than conventional solvers. This approach holds promise for efficiently simulating complex many-body systems, such as those involving black-hole binaries or dense star clusters.
 \subsection{Physics Informed Deep Learning: Data-driven Solutions of Nonlinear Partial Differential Equations}
-\citep{raissi2017physicsinformeddeeplearning} introduces Physics-Informed Neural Networks (PINNs) as a novel approach to solving problems governed by partial differential equations (PDEs). PINNs incorporate the underlying physical laws, expressed as PDEs, directly into the neural network's loss function, enabling them to learn solutions while respecting the governing equations. This eliminates the need for labeled data, relying instead on the residuals of the PDEs to guide the training. The study demonstrates the application of PINNs to a variety of forward and inverse problems, such as fluid dynamics and heat conduction. The framework is particularly useful for problems with limited observational data or where traditional numerical solvers are computationally expensive. PINNs offer a generalizable and efficient alternative for modeling complex physical systems.
+\cite{raissi2017physicsinformeddeeplearning} introduces Physics-Informed Neural Networks (PINNs) as a novel approach to solving problems governed by partial differential equations (PDEs). PINNs incorporate the underlying physical laws, expressed as PDEs, directly into the neural network's loss function, enabling them to learn solutions while respecting the governing equations. This eliminates the need for labeled data, relying instead on the residuals of the PDEs to guide the training. The study demonstrates the application of PINNs to a variety of forward and inverse problems, such as fluid dynamics and heat conduction. The framework is particularly useful for problems with limited observational data or where traditional numerical solvers are computationally expensive. PINNs offer a generalizable and efficient alternative for modeling complex physical systems.
 
 \section{Problem statement}
 On a closed system, the governing laws are described by the minimal action principle. The current work adheres to this principle as it derives the Euler-Lagrange equations, from which we can induce a Legendre transform that turns into the hamiltonian formulation:
@@ -230,22 +230,6 @@ This defines the incompressibility ($\nabla \cdot u = 0$) of a hamiltonian syste
 \end{definition}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Optional Glossary, Notation or Acronym section goes here:
-%
-%%%%%%%%%%%%%%
-% Glossary is only allowed in Reviews of Geophysics
-%  \begin{glossary}
-%  \term{Term}
-%   Term Definition here
-%  \term{Term}
-%   Term Definition here
-%  \term{Term}
-%   Term Definition here
-%  \end{glossary}
-
-%
 %%%%%%%%%%%%%%
 % Acronyms
 %   \begin{acronyms}
@@ -268,27 +252,6 @@ This defines the incompressibility ($\nabla \cdot u = 0$) of a hamiltonian syste
 %  body comes from the energy of motion of the body—that is, its kinetic
 %  energy ($E$)—divided by the speed of light squared ($c^2$).
 %   \end{notation}
-
-%% ------------------------------------------------------------------------ %%
-%% References and Citations
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \bibliography{<name of your .bib file>} don't specify the file extension
-%
-% don't specify bibliographystyle
-
-% In the References section, cite the data/software described in the Availability Statement (this includes primary and processed data used for your research). For details on data/software citation as well as examples, see the Data & Software Citation section of the Data & Software for Authors guidance
-% https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors#citation
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\bibliography{enter your bibtex bibliography filename here}
-
-
-
-%Reference citation instructions and examples:
-%
 % Please use ONLY \cite and \citeA for reference citations.
 % \cite for parenthetical references
 % ...as shown in recent studies (Simpson et al., 2019)
@@ -304,155 +267,9 @@ This defines the incompressibility ($\nabla \cdot u = 0$) of a hamiltonian syste
 %...has been shown by \cite <e.g.,>[and others]{lewin76}.
 %
 % apacite uses < > for prenotes and [ ] for postnotes
-% DO NOT use other cite commands (e.g., \citet, \citep, \citeyear, \citealp, etc.).
+% DO NOT use other cite commands (e.g., \citet, \cite, \citeyear, \citealp, etc.).
 % \nocite is okay to use to add references from your Supporting Information
 %
-
-
+\bibliography{agusample}
 
 \end{document}
-
-
-
-More Information and Advice:
-
-%% ------------------------------------------------------------------------ %%
-%
-%  SECTION HEADS
-%
-%% ------------------------------------------------------------------------ %%
-
-% Capitalize the first letter of each word (except for
-% prepositions, conjunctions, and articles that are
-% three or fewer letters).
-
-% AGU follows standard outline style; therefore, there cannot be a section 1 without
-% a section 2, or a section 2.3.1 without a section 2.3.2.
-% Please make sure your section numbers are balanced.
-% ---------------
-% Level 1 head
-%
-% Use the \section{} command to identify level 1 heads;
-% type the appropriate head wording between the curly
-% brackets, as shown below.
-%
-%An example:
-%\section{Level 1 Head: Introduction}
-%
-% ---------------
-% Level 2 head
-%
-% Use the \subsection{} command to identify level 2 heads.
-%An example:
-%\subsection{Level 2 Head}
-%
-% ---------------
-% Level 3 head
-%
-% Use the \subsubsection{} command to identify level 3 heads
-%An example:
-%\subsubsection{Level 3 Head}
-%
-%---------------
-% Level 4 head
-%
-% Use the \subsubsubsection{} command to identify level 3 heads
-% An example:
-%\subsubsubsection{Level 4 Head} An example.
-%
-%% ------------------------------------------------------------------------ %%
-%
-%  IN-TEXT LISTS
-%
-%% ------------------------------------------------------------------------ %%
-%
-% Do not use bulleted lists; enumerated lists are okay.
-% \begin{enumerate}
-% \item
-% \item
-% \item
-% \end{enumerate}
-%
-%% ------------------------------------------------------------------------ %%
-%
-%  EQUATIONS
-%
-%% ------------------------------------------------------------------------ %%
-
-% Single-line equations are centered.
-% Equation arrays will appear left-aligned.
-
-Math coded inside display math mode \[ ...\]
- will not be numbered, e.g.,:
- \[ x^2=y^2 + z^2\]
-
- Math coded inside \begin{equation} and \end{equation} will
- be automatically numbered, e.g.,:
- \begin{equation}
- x^2=y^2 + z^2
- \end{equation}
-
-
-% To create multiline equations, use the
-% \begin{eqnarray} and \end{eqnarray} environment
-% as demonstrated below.
-\begin{eqnarray}
-  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
-        && + (y - y_{0}) \sin \Theta  \nonumber \\
-  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
-        && + (y - y_{0}) \cos \Theta.
-\end{eqnarray}
-
-%If you don't want an equation number, use the star form:
-%\begin{eqnarray*}...\end{eqnarray*}
-
-% Break each line at a sign of operation
-% (+, -, etc.) if possible, with the sign of operation
-% on the new line.
-
-% Indent second and subsequent lines to align with
-% the first character following the equal sign on the
-% first line.
-
-% Use an \hspace{} command to insert horizontal space
-% into your equation if necessary. Place an appropriate
-% unit of measure between the curly braces, e.g.
-% \hspace{1in}; you may have to experiment to achieve
-% the correct amount of space.
-
-
-%% ------------------------------------------------------------------------ %%
-%
-%  EQUATION NUMBERING: COUNTER
-%
-%% ------------------------------------------------------------------------ %%
-
-% You may change equation numbering by resetting
-% the equation counter or by explicitly numbering
-% an equation.
-
-% To explicitly number an equation, type \eqnum{}
-% (with the desired number between the brackets)
-% after the \begin{equation} or \begin{eqnarray}
-% command.  The \eqnum{} command will affect only
-% the equation it appears with; LaTeX will number
-% any equations appearing later in the manuscript
-% according to the equation counter.
-%
-
-% If you have a multiline equation that needs only
-% one equation number, use a \nonumber command in
-% front of the double backslashes (\\) as shown in
-% the multiline equation above.
-
-% If you are using line numbers, remember to surround
-% equations with \begin{linenomath*}...\end{linenomath*}
-
-%  To add line numbers to lines in equations:
-%  \begin{linenomath*}
-%  \begin{equation}
-%  \end{equation}
-%  \end{linenomath*}
-
-
-

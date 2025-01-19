@@ -9,7 +9,8 @@ scheduler:
   decay_rate: 0.95
   decay_steps: 4000
 
-model:
+arch:
+  fully_connected:
   in_features: 3
   hidden_layers: [10, 32, 10, 3]
   activations: [ReLU, ReLU, null, null]
@@ -22,8 +23,6 @@ training:
   max_steps: 10000
 
 batch_size:
-  bc: 1000
-  pde: 1000
-
-graph:
-  func_arch: true
+  boundary: 1000
+  p_dot: 1000
+  q_dot: 1000
