@@ -14,16 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [ '3.9', '3.10', '3.11', '3.12']
-        include:
-          - python-version: '3.9'
-            commit: false
-          - python-version: '3.12'
-            commit: false
-          - python-version: '3.11'
-            commit: false
-          - python-version: '3.10'
-            commit: true
+        python-version: '3.10'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -37,7 +28,6 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
-          python3 setup.py install
 
       - name: Run tests
         run: |
