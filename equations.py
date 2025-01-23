@@ -1,7 +1,5 @@
-from sympy import Symbol, Function, Number
-from modulus.sym.geometry.primitives import VectorField
+from sympy import Symbol, Function, Number, diff
 from modulus.eq.pdes import PDE
-from modulus.key import Key
 from typing import List, Dict
 from scipy.constants import G
 from itertools import chain
@@ -9,26 +7,37 @@ from itertools import chain
 
 def generalPhase(mass: List[Number], dimensions: int = 2) -> Dict[str, List[Symbol]]:
     N: int = len(mass)
-    t: Symbol = Symbol("t")
-    q: List[Symbol] = [Symbol(f"q{i}") for i in range(1, dimensions * N)]
-    new_mass: List[Number] = list(
-        chain.from_iterable(map(lambda mass: [mass] * dimensions))
-    )
-    return dict(q=q, p=[qi.diff(t) * mi for qi, mi in zip(q, new_mass)])
+    q: List[Symbol] = [Symbol(f"q{i}") for i in range(dimensions * N)]
+    return {
+        "q": q,
+        "p": [Symbol(f"p{i}") for i in range(dimensions * N)],
+    }
 
 
 def createMasses(masses: List[float]) -> List[Number]:
-    return list(map(lambda x: Number(x), masses))
+    return [Number(m) for m in masses]
 
 
 class Hamiltonian(PDE):
     def __init__(self, masses: List[float], dimensions: int = 2) -> None:
         super().__init__()
-        assert dimensions <= 3, "Not valid dimension value"
+        assert dimensions <= 3, "Invalid dimension value (must be ≤ 3)"
         t = Symbol("t")
         mass: List[Number] = createMasses(masses)
-        input: Dict[str, List[Symbol]] = generalPhase(mass)
+        input: Dict[str, List[Symbol]] = generalPhase(mass, dimensions)
         q: List[Symbol] = input["q"]
         p: List[Symbol] = input["p"]
-        H = Function()(*q, *p)
-        self.equations = dict()
+        kinetic_energy = sum([pi**2 / (2 * mi) for pi, mi in zip(p, mass)])
+        potential_energy = sum(
+            [
+                G * mi * mj / abs(qi - qj)
+                for i, qi in enumerate(q)
+                for j, qj in enumerate(q)
+                if i != j
+            ]
+        )
+        H = kinetic_energy + potential_energy
+        self.equations = {}
+        for i, (qi, pi) in enumerate(zip(q, p)):
+            self.equations[f"q{i}_dot"] = diff(H, pi) - qi.diff(t)
+            self.equations[f"p{i}_dot"] = -diff(H, qi) - pi.diff(t)

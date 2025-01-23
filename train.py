@@ -20,6 +20,12 @@ def make_geometry():
 
 @modulus.sym.main(config_path="conf", config_name="config")
 def run(cfg: ModulusConfig) -> None:
+    assert len(cfg.custom.masses) * cfg.custom.dimensions == len(
+        cfg.custom.q0
+    ), "Not valid dimensions, masses or general coordinates"
+    assert len(cfg.custom.masses) * cfg.custom.dimensions == len(
+        cfg.custom.p0
+    ), "Not valid dimensions, masses or general momenta"
     t: Symbol = Symbol("t")
     input: Dict[str, List[Symbol]] = generalPhase(
         cfg.custom.masses, cfg.custom.dimensions
@@ -38,11 +44,25 @@ def run(cfg: ModulusConfig) -> None:
     geo = make_geometry()
     domain = Domain()
 
-    initial = PointwiseBoundaryConstraint(
+    initial_q = PointwiseBoundaryConstraint(
         nodes=nodes,
         geometry=geo,
-        outvar={"q": cfg.custom.q0, "p": cfg.custom.p0},
-        batch_size=cfg.batch_size.boundary,
+        outvar={
+            f"q{i}": cfg.custom.p0[i]
+            for i in range(1, cfg.custom.dimensions * len(cfg.custom.masses))
+        },
+        batch_size=cfg.batch_size.initial,
+        parameterization={t: 0},
+    )
+
+    initial_p = PointwiseBoundaryConstraint(
+        nodes=nodes,
+        geometry=geo,
+        outvar={
+            f"p{i}": cfg.custom.p0[i]
+            for i in range(1, cfg.custom.dimensions * len(cfg.custom.masses))
+        },
+        batch_size=cfg.batch_size.initial,
         parameterization={t: 0},
     )
 
@@ -53,21 +73,34 @@ def run(cfg: ModulusConfig) -> None:
     q_dot = PointwiseInteriorConstraint(
         nodes=nodes,
         geometry=geo,
-        outvar={"q_dot": 0},  ## revisar
+        outvar={
+            f"q{i}_dot": 0
+            for i in range(1, cfg.custom.dimensions * len(cfg.custom.masses))
+        },
         batch_size=cfg.batch_size.q_dot,
-        bounds={},
+        bounds={
+            f"q{i}": (-1, 1)
+            for i in range(1, cfg.custom.dimensions * len(cfg.custom.masses))
+        },
     )
 
     p_dot = PointwiseInteriorConstraint(
         nodes=nodes,
         geometry=geo,
-        outvar={"p_dot": 0},  ## revisar
+        outvar={
+            f"p{i}_dot": 0
+            for i in range(1, cfg.custom.dimensions * len(cfg.custom.masses))
+        },
         batch_size=cfg.batch_size.p_dot,
-        bounds={},
+        bounds={
+            f"p{i}": (-1, 1)
+            for i in range(1, cfg.custom.dimensions * len(cfg.custom.masses))
+        },
     )
 
-    domain.add_constraint(initial, "initial")
     domain.add_constraint(boundary, "boundary")
+    domain.add_constraint(initial_q, "initial_q")
+    domain.add_constraint(initial_p, "initial_p")
     domain.add_constraint(p_dot, "p_dot_hamiltonian")
     domain.add_constraint(q_dot, "q_dot_hamiltonian")
 
