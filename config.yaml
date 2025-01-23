@@ -26,3 +26,11 @@ batch_size:
   boundary: 1000
   p_dot: 1000
   q_dot: 1000
+
+custom:
+  geometry:
+    nr_points: 1000
+  dimensions: 2
+  masses: [1, 1, 1]
+  q0: [0, 0, 0]
+  p0: [0, 0, 0]
