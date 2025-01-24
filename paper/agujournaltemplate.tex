@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\title{Physics informed Neural Networks for Celestial Mechanics: The N-body problem}
+\title{Physics informed Neural Networks for Celestial Mechanics: The Set of N-body problems}
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -104,46 +104,92 @@ By synthesizing principles from classical mechanics, numerical analysis, and sta
 \subsection{Physics Informed Deep Learning: Data-driven Solutions of Nonlinear Partial Differential Equations}
 \cite{raissi2017physicsinformeddeeplearning} introduces Physics-Informed Neural Networks (PINNs) as a novel approach to solving problems governed by partial differential equations (PDEs). PINNs incorporate the underlying physical laws, expressed as PDEs, directly into the neural network's loss function, enabling them to learn solutions while respecting the governing equations. This eliminates the need for labeled data, relying instead on the residuals of the PDEs to guide the training. The study demonstrates the application of PINNs to a variety of forward and inverse problems, such as fluid dynamics and heat conduction. The framework is particularly useful for problems with limited observational data or where traditional numerical solvers are computationally expensive. PINNs offer a generalizable and efficient alternative for modeling complex physical systems.
 
-\section{Problem statement}
-On a closed system, the governing laws are described by the minimal action principle. The current work adheres to this principle as it derives the Euler-Lagrange equations, from which we can induce a Legendre transform that turns into the hamiltonian formulation:
+\section{General problem statement}
+On a closed system, the governing laws are described by the minimal action principle. The current work adheres to this principle as it derives the Euler-Lagrange equations, from which we can induce a Legendre transform that turns into the hamiltonian formulation. Different historical problem are restricted by different types of constraints (holonomic and non-holonomic), that's why in each section defines its own separated problem with different kinds of boundary conditions (Dirichlet and Neumann boundary conditions). Moreover, the general coordinate systems will vary, so the following description are only valid for the cartesian scenario.
+
+In this case, we generally adhere to the classical gravitational potential function for the $N$ bodies and kinetic energy transformed to the desired phase space:
 \begin{align}
-    \mathcal{H}\left(\mathbf{q}, \mathbf{p}\right) &= K\left(\mathbf{p}\right)+ U\left(\mathbf{q}\right) \\
-    \dot{\mathbf{q}} &= \nabla_\mathbf{p} \mathcal{H} \\
-    \dot{\mathbf{p}} &= - \nabla_\mathbf{q} \mathcal{H}
-\end{align}
-In this case, we adhere to the classical gravitational potential function for the $N$ bodies and kinetic energy transformed to the desired phase space:
-\begin{align*}
     U(\mathbf{q}) &= - G \sum_{1 \leq i \leq n \leq N} \frac{m_i m_n}{\norm{\mathbf{r}_i\left(\mathbf{q}\right) - \mathbf{r}_n\left(\mathbf{q}\right)}}_2 \\
     K(\mathbf{p}) &= \sum_{i = 1}^{N} \frac{\mathbf{p}_i^2\left(\mathbf{p}\right)}{2 m_i}
-\end{align*}
+\end{align}
 
 $G$ being the gravitational constant, for each cartesian $\mathbf{p}_i$ and $\mathbf{r}_i$ as functions of the generalized coordinates $\mathbf{p}$ and $\mathbf{q}$ respectively within our phase space $\mathcal{P}$. We also remind the reader of the properties of this system in the appendix section.
 
-Hence, we are looking for a universal approximator that can resemble the properties and mechanics described by this system:
-\begin{align*}
-    \mathcal{H}_\theta &\colon \mathcal{P} \to \mathbb{R} \\
-    \dot{\mathbf{q}} = \frac{\partial \mathcal{H}}{\partial \mathbf{\theta}} \frac{\partial \mathbf{\theta}}{\partial \mathbf{p}} &= \nabla_\mathbf{p} \nabla_\theta \mathcal{H}_\theta \\
-    \dot{\mathbf{p}} = - \frac{\partial \mathcal{H}}{\partial \mathbf{\theta}} \frac{\partial \mathbf{\theta}}{\partial \mathbf{q}} &= - \nabla_\mathbf{q} \nabla_\theta \mathcal{H}_\theta \\
-\end{align*}
+Hence, we are looking for a universal approximator that can resemble the properties and mechanics described by the system:
 
-We finally define the following loss function to solve the system:
+\begin{align}
+    \mathbf{q}_\theta &\colon t \in \left[0, \infty\right)\to \mathbb{R}^{3N} \\
+    \mathbf{p}_\theta &:= \left\{ m_\alpha \dot{q_{\theta\alpha}} \right\}_{\alpha = 1}^{3N}
+\end{align}
+$\mathbf{q}_\theta$ being the learnable universal approximator representing the general coordinates, $\mathbf{p}_\theta$ being the general momenta, $q_{\theta\alpha}$ being the $\alpha$-t component of $\mathbf{q}_\theta$, and $m_{\alpha}$ being the masses corresponding to each body.
 
-\begin{equation}
-    \mathcal{L}_{PDE} &= \norm{\int_\mathcal{P} \dot{\mathbf{p}} + \nabla_\mathbf{q} \nabla_\theta \mathcal{H}_\theta d(\boldsymbol{\lambda} (t))}^2 + \norm{\int_\mathcal{P} \dot{\mathbf{q}} - \nabla_\mathbf{p} \nabla_\theta \mathcal{H}_\theta d(\boldsymbol{\lambda} (t))}^2 \\
-\end{equation}
-for some $\boldsymbol{\lambda} (t) \colon \mathbb{R}^+ \to \mathbb{R}^N$ defining the paths of the $N$ bodies.
+For generalizable Dirichlet initial conditions, we define the following scheme:
 
-The initial conditions will be defined randomly for each iteration. A rectangular geometry is generally chosen to be our problem geometry within the $\mathbb{R}^2$ simulation. Finally, the loss function is:
-\begin{align*}
+\begin{align}
+    \mathcal{L}_{Initial} &= \sum_{\alpha = 1}^{3N} \norm{q_{\theta\alpha}(0) - q_{0\alpha}}^2_2
+\end{align}
+
+Finally, the loss function is:
+
+\begin{align}
     \mathcal{L} = \alpha_0 \mathcal{L}_{PDE} + \alpha_1 \mathcal{L}_{Initial}
+\end{align}
+
+Where $\mathcal{L}_{PDE}$ represents the deviation from the governing laws of the physical system, each system's dynamical system will be defined separately due to the different constraints.
+
+\section{N free bodies dynamics}
+\subsection{Dynamical system}
+Under the minimal action principle, this free system obeys the laws of the general Hamiltonian formulation. Therefore, the respective dynamical equations are adopted for the convex optimization phase:
+
+\begin{align}
+    \frac{\partial \mathbf{q}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{p}_\theta} \\
+    \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= - \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta}
+\end{align}
+
+We finally define the following loss function to solve the PDE system:
+
+\begin{align}
+    \mathcal{L}_{PDE} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H}\right) dt}_2^2 + \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2
+\end{align}
+
+\subsection{Results}
+
+\section{Static configuration (Euler)}
+\subsection{Dynamical system}
+Under the minimal action principle and holonomic constraints, this geometrically constrained system obeys the laws of the general Hamiltonian formulation and the undetermined Lagrange multipliers. Therefore, the respective dynamical equations are adopted for the convex optimization phase:
+
+\begin{align}
+    \frac{\partial \mathbf{q}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{p}_\theta} \\
+    \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= - \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta} - \sum_{\alpha = 1}^{N_c} \lambda_\alpha \sigma_\alpha
+\end{align}
+for some set of functions $\sigma_\alpha$ defined as follows:
+\begin{align*}
+    \sigma_\alpha \colon \mathbb{R}^{3N + 1} \to \mathbb{R} \\
+    \sigma_\alpha \left( \mathbf{q}, t \right) = 0
 \end{align*}
+defining the constraints of the system.
+We finally define the following loss function to solve the PDE system:
 
-The present work's hypothesis is the existence of some function that embodies the whole dynamics of the system.
+\begin{align}
+    \mathcal{L}_{PDE} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \sum_{\alpha = 1}^3 \lambda_\alpha \sigma_\alpha \right) dt}_2^2 + \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2
+\end{align}
 
-\section{Results}
-Architecture configuration for neural networks
+\subsection{Results}
+\section{Geometrically constrained configuration (Lagrange)}
+\subsection{Dynamical system}
+Under the minimal action principle and non-holonomic constraints, this geometrically constrained system obeys the laws of the general Hamiltonian formulation and the undetermined Lagrange multipliers. Therefore, the respective dynamical equations are adopted for the convex optimization phase:
 
-Bodies and masses configurations with results against numerical solvers
+\begin{align}
+    \frac{\partial \mathbf{q}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{p}_\theta} \\
+    \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= - \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta}
+\end{align}
+
+We finally define the following loss function to solve the PDE system:
+
+\begin{align}
+    \mathcal{L}_{PDE} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H}\right) dt}_2^2 + \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2
+\end{align}
+\subsection{Results}
 
 \section{Conclusion}
 This work presents a novel approach to solving the N-body problem using physics-informed neural networks. By incorporating the Hamilton's equations for gravitational interactions directly into the neural network architecture through the loss function, we have demonstrated that it is possible to create a universal approximator that preserves the fundamental physical properties of celestial mechanical systems, including energy conservation and phase space incompressibility.
@@ -167,27 +213,27 @@ In conclusion, this work demonstrates the potential of physics-informed neural n
 \section{The Principle of Least Action}
 \begin{definition}[The Action Integral]
     The action is a scalar quantity describing the balance between the kinetic and potential energy in a physical system. It can be described as follows given some generalized coordinates $\mathbf{q}$:
-    \begin{align*}
+    \begin{align}
         A\left[ \matbf{q}(t) \right] = \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt
-    \end{align*}
+    \end{align}
 \end{definition}
 
 being $\mathcal{L}$ the Lagrangian:
 
-\begin{align*}
+\begin{align}
     \mathcal{L} \left(\mathbf{q}, \dot{\mathbf{q}}, t \right) = \sum_{i = 1}^{3N} \frac{m_i \dot{q}_i^2}{2} - U(\mathbf{q})
-\end{align*}
+\end{align}
 
 \begin{definition}[The Principle of Least Action]
     The Principle of Least Action states that a path taken by a physical system has a stationary values for the system's action. This means, similar paths near one another have very similar action values.
-    \begin{align*}
+    \begin{align}
         \delta A\left[ \matbf{q}(t) \right] = 0
-    \end{align*}
+    \end{align}
     We can develop this formulation to get the Euler-Lagrange equation:
-    \begin{align*}
+    \begin{align}
         \delta A\left[ \matbf{q}(t) \right] &= \delta \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt \\
         0 = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)dt &= \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta q \right) \Big|_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}  \right) \delta q dt
-    \end{align*}
+    \end{align}
     Given the conditions of the Least Action Principle, the first term vanishes, leaving the second term equal to zero, leading to the Euler-Lagrange equation:
     \begin{equation}
         \frac{\partial \mathcal{L}}{\partial \mathbf{q}} = \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}
@@ -196,44 +242,51 @@ being $\mathcal{L}$ the Lagrangian:
 
 \section{The Hamiltonian Formulation}
 We first introduce a Legendre tranformation to the Lagrangian given the following equality:
-\begin{align*}
+\begin{align}
     \mathbf{p} = \frac{\partial \mathcal{L}}{\partial \mathbf{q}}
-\end{align*}
+\end{align}
 
 Given the Legendre transformation formulation given $s = f'(x)$ and an inverse transformation $g$ such that $g^{-1}(s) = x$:
 
-\begin{align*}
+\begin{align}
     \hat{f}(s) = f(g^{-1}(s)) - s \cdot g^{-1}(s)
-\end{align*}
+\end{align}
 
 We can rewrite the Lagrangian in terms of the momenta $\mathbf{p}$ as follows:
 
-\begin{align*}
+\begin{align}
     \hat{\mathcal{L}}(\mathbf{q}, \mathbf{p}) &= \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}(\mathbf{p})) - \nabla_{\dot{\mathbf{q}}} \mathcal{L} \cdot \dot{q} \\
     \hat{\mathcal{L}}(\mathbf{q}, \mathbf{p}) &= \sum_{i = 1}^{3N} \frac{p_i}{2m_i} - U(\mathbf{q}) - \nabla_{\dot{\mathbf{q}}} \mathcal{L} \cdot \dot{q} \\
     \hat{\mathcal{L}}(\mathbf{q}, \mathbf{p}) &= - \sum_{i = 1}^{3N} \frac{p_i}{2m_i} - U(\mathbf{q})
-\end{align*}
+\end{align}
 
 The negative of this transformation ($-\hat{\mathcal{L}}$) is the hamiltonian $\mathcal{H}$, if we replace it in the Euler-Lagrange equations, we can induce the mechanical equations:
-\begin{align*}
+\begin{align}
     \dot{\mathbf{q}} &= \nabla_\mathbf{p} \mathcal{H} \\
-    \dot{\mathbf{p}} &= - \nabla_\mathbf{q} \mathcal{H} \\
-\end{align*}
-
+    \dot{\mathbf{p}} &= - \nabla_\mathbf{q} \mathcal{H}
+\end{align}
 \begin{definition}[Properties of the Hamiltonian]
     The hamiltonian formulation leads to all the foundational energy principles as it represents the total energy of a system.
-    \begin{align*}
+    \begin{align}
         \frac{d\mathcal{H}}{dt} = \nabla_\mathbf{q} \mathcal{H} \cdot \dot{\mathbf{q}} + \nabla_\mathbf{p} \mathcal{H} \cdot \dot{\mathbf{p}} = - \mathbf{p} \cdot \dot{\mathbf{q}} + \dot{\mathbf{q}} \cdot \dot{\mathbf{p}} = 0
-    \end{align*}
+    \end{align}
     This means that the total energy of a closed hamiltonian system is conserved through time.
     Moreover, if we compute the divergence of a velocity field described within the hamiltonian formulation:
-\begin{align*}
+\begin{align}
     \mathbf{x} &= (\mathbf{q}, \mathbf{p}) \\
     \dot{\mathbf{x}} &= (\dot{\mathbf{q}}, \dot{\mathbf{p}}) \\
     \nabla_\mathbf{x} \cdot \dot{\mathbf{x}} = \nabla_\mathbf{q} \cdot \dot{\mathbf{q}} + \nabla_\mathbf{p} \cdot \dot{\mathbf{p}} &= \nabla_\mathbf{q} \cdot \nabla_\mathbf{p} \mathcal{H} - \nabla_\mathbf{p} \cdot \nabla_\mathbf{q} \mathcal{H} = 0 \\
     \nabla_\mathbf{x} \cdot \dot{\mathbf{x}} &= 0
-\end{align*}
+\end{align}
 This defines the incompressibility ($\nabla \cdot u = 0$) of a hamiltonian system.
+
+%% symplectic structure
+
+\section{Constrained Hamiltonian formulation}
+
+%% holonomic constrains
+%% non-holonomic constrains
+%% gauss constrained
 
 \end{definition}
 
