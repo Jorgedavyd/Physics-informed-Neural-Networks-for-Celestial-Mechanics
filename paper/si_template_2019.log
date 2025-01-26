@@ -1,0 +1,301 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  26 JAN 2025 02:08
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**si_template_2019.tex
+(./si_template_2019.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(./agutexSI2019.cls
+
+
+ AGUTeX Journal Style, American Geophysical Union 
+ This version is dated January 14, 2019
+
+
+Document Class: agutexSI2019 01/14/2019
+\c@chapter=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@figure=\count192
+\c@table=\count193
+\mathindent=\dimen140
+\abovefigcaptionskip=\skip48
+\abovetabcaptionskip=\skip49
+\abovetableskip=\skip50
+\belowtabcaptionskip=\dimen141
+\landscapebox=\box51
+\c@plate=\count194
+\savecurrtable=\box52
+\abovetabularskip=\skip51
+\belowtabularskip=\skip52
+\timing=\count195
+\hourcount=\count196
+\oldtime=\count197
+\totpages=\count198
+\belowtitleskip=\dimen142
+\abovesubtitleskip=\dimen143
+\belowsubtitleskip=\dimen144
+\aboveauthorskip=\dimen145
+\belowauthorskip=\dimen146
+\thanksnum=\count199
+\dothanks=\count266
+\thankscounter=\count267
+\titlethanksnum=\count268
+\dotitlethanks=\count269
+\titlethankscounter=\count270
+\thanksnum=\count271
+\dothanks=\count272
+\thankscounter=\count273
+\authorwidth=\dimen147
+\authorbaselineskip=\dimen148
+\aboveaffilskip=\dimen149
+\belowaffilskip=\dimen150
+\affilwidth=\dimen151
+\aboveabstractskip=\dimen152
+\belowabstractskip=\dimen153
+\belowabstractnameskip=\dimen154
+\abstractmargin=\dimen155
+\abovereceivedskip=\skip53
+\aboverevisedskip=\skip54
+\aboveacceptedskip=\skip55
+\abovepublishededskip=\skip56
+\barticle=\box53
+\thanksbox=\box54
+\titlethanksbox=\box55
+\c@appendnum=\count274
+\footnum=\count275
+\savefootnum=\count276
+\ackskip=\skip57
+\saveparskip=\dimen156
+\captionskip=\dimen157
+\PushOneColTopFig=\dimen158
+\PushOneColBotFig=\dimen159
+\PushOneColTopTab=\dimen160
+\PushOneColBotTab=\dimen161
+\PushTwoColTopFig=\dimen162
+\PushTwoColBotFig=\dimen163
+\PushTwoColTopTab=\dimen164
+\PushTwoColBotTab=\dimen165
+\intextfloatskip=\skip58
+\c@appfigure=\count277
+\c@apptable=\count278
+\c@appplate=\count279
+\checkforspace=\dimen166
+\savetopinsert=\box56
+\savebotinsert=\box57
+\secondsavetopinsert=\box58
+\secondsavebotinsert=\box59
+\firstcolbox=\box60
+\secondcolbox=\box61
+\thefirstbox=\box62
+\thesecondbox=\box63
+\firstcol=\dimen167
+\secondcol=\dimen168
+\checkheight=\dimen169
+\loopnum=\count280
+\firstcolsavefignum=\count281
+\footnotebox=\box64
+\ColUsed=\dimen170
+\FigSpace=\dimen171
+\testdblbotins=\box65
+\pageloopnum=\count282
+\endcolsavetopinsert=\box66
+\endcolsavebotinsert=\box67
+\testpagesize=\box68
+\savelastskip=\dimen172
+\partialpage=\box69
+\figandtabnumber=\count283
+\figandtabbox=\box70
+\pagefloatnumber=\count284
+\sizeoffloat=\box71
+\bogus=\count285
+\figinsert=\insert252
+\herebox=\box72
+\endfigbox=\box73
+\spanbox=\box74
+\dbltopins=\box75
+\dblbotins=\box76
+\dblbotskip=\skip59
+\dblfigandtabnumber=\count286
+\dblfigandtabbox=\box77
+\dblloopnum=\count287
+\savedblfigandtabnumber=\count288
+\dblspanherebox=\box78
+\bigpagenum=\count289
+\littlepagenum=\count290
+\wholepagenum=\count291
+\@cprtype=\count292
+\@slugcmmntwidth=\dimen173
+\affilnum=\count293
+\totalaffils=\count294
+\figcount=\count295
+\saveequation=\count296
+\c@currlett=\count297
+\notationwidth=\dimen174
+\betweennotationskip=\skip60
+\WidestEntry=\dimen175
+\premulticols=\dimen176
+\page@free=\dimen177
+\partial@page=\box79
+\multicoltolerance=\count298
+\doublecol@number=\count299
+\multicolbaselineskip=\skip61
+\c@collectmore=\count300
+\loopcount=\count301
+\fixdimen=\dimen178
+\c@unbalance=\count302
+\savedimen=\dimen179
+\savehsize=\dimen180
+\mycolumnwidth=\dimen181
+\saveparindent=\dimen182
+\saveparskip=\dimen183
+\abstractwidth=\dimen184
+\currlastnumber=\count303
+\altaffilbox=\box80
+\sectskip=\skip62
+\belowsectionskip=\skip63
+\subsectskip=\skip64
+\belowsubsectskip=\skip65
+\subsubsectskip=\skip66
+\belowsubsubsectskip=\skip67
+\c@subsubsubsection=\count304
+\captionwidth=\dimen185
+\widecaptionwidth=\dimen186
+\landscapecaptionwidth=\dimen187
+\@temptokenb=\toks17
+(/usr/share/texmf-dist/tex/latex/apacite/apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count305
+\bibleftmargin=\skip68
+\bibindent=\skip69
+\bibparsep=\skip70
+\bibitemsep=\skip71
+\biblabelsep=\skip72
+) (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\beforeendskip=\skip73
+
+
+
+ JGRGA style option, October 1, 2001,
+ \documentclass[jgrga]{AGUTeX}
+ ``Journal of Geophysical Research'', 
+ Published by American Geophysical Union
+
+
+\titlesize=\dimen188
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen189
+\Gin@req@width=\dimen190
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count306
+\l__pdf_internal_box=\box81
+) (./si_template_2019.aux)
+\openout1 = `si_template_2019.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+\c@maskedRefs=\count307
+ (/usr/share/texmf-dist/tex/latex/apacite/english.apc
+File: english.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 129.
+LaTeX Info: Redefining \BHBI on input line 130.
+) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count308
+\scratchdimen=\dimen191
+\scratchbox=\box82
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen192
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 158.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 158.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 158.
+
+
+./si_template_2019.tex:296: LaTeX mark Error: Infinite shrinkage found in 'page'.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.296 \clearpage
+                
+
+This is a coding error.
+
+The mark region 'page' contains some infinite negative glue allowing it to
+shrink to an arbitrary size. This makes it impossible to split the region
+apart to get at its marks. They are lost.
+
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+] (./si_template_2019.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 2541 strings out of 476076
+ 36586 string characters out of 5793775
+ 1929187 words of memory out of 5000000
+ 24675 multiletter control sequences out of 15000+600000
+ 566485 words of font info for 64 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 62i,6n,65p,489b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on si_template_2019.pdf (1 page, 75932 bytes).
+PDF statistics:
+ 43 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

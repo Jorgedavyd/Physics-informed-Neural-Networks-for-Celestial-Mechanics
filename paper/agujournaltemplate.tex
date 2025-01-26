@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\title{Physics informed Neural Networks for Celestial Mechanics: The Set of N-body problems}
+\title{Physics informed Neural Networks for Celestial Mechanics: The Family of N-body problems}
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -37,7 +37,7 @@
 % Example: \authors{A. B. Author\affil{1}\thanks{Current address, Antartica}, B. C. Author\affil{2,3}, and D. E.
 % Author\affil{3,4}\thanks{Also funded by Monsanto.}}
 
-\authors{Jorge Enciso}
+\authors{Jorge D. Enciso}
 
 
 % \affiliation{1}{First Affiliation}
@@ -162,33 +162,55 @@ Under the minimal action principle and holonomic constraints, this geometrically
     \frac{\partial \mathbf{q}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{p}_\theta} \\
     \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= - \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta} - \sum_{\alpha = 1}^{N_c} \lambda_\alpha \sigma_\alpha
 \end{align}
-for some set of functions $\sigma_\alpha$ defined as follows:
+for some set of $N_c$ functions $\sigma_\alpha$ defined as follows:
 \begin{align*}
     \sigma_\alpha \colon \mathbb{R}^{3N + 1} \to \mathbb{R} \\
     \sigma_\alpha \left( \mathbf{q}, t \right) = 0
 \end{align*}
-defining the constraints of the system.
+These holonomic constraints will be enforced for a set $\mathcal{Q}$ of cardinality $n \colon n \in \mathbb{N} \wedge n < N$. The set $\mathcal{Q}$ contains the generalized coordinates corresponding to bodies whose positions remain static. This reduces the degrees of freedom of the system by $3n$. Hence, for an indexed set $\left\{\alpha_i\right\} \colon \alpha_i \in \mathbb{N} \wedge q_{\theta\alpha_i} \in \mathcal{Q}$ with the same cardinality as $\mathcal{Q}$, to enforce the static behavior of the $n$ bodies, we define the following constraint:
+\begin{align*}
+    \sigma_\alpha(\mathbf{q}, t) = \norm{q_{\theta\alpha}(t) - q_{\theta\alpha}(0)}_2
+\end{align*}
+
 We finally define the following loss function to solve the PDE system:
 
 \begin{align}
-    \mathcal{L}_{PDE} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \sum_{\alpha = 1}^3 \lambda_\alpha \sigma_\alpha \right) dt}_2^2 + \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2
+    \mathcal{L}_{p} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \sum_{\beta \in \left\{\alpha\right\}} \lambda_\beta \sigma_\beta \right) dt}_2^2 \\
+    \mathcal{L}_{q} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2 \\
+    \mathcal{L}_{PDE} &= \mathcal{L}_1 + \mathcal{L}_2
 \end{align}
 
 \subsection{Results}
 \section{Geometrically constrained configuration (Lagrange)}
 \subsection{Dynamical system}
-Under the minimal action principle and non-holonomic constraints, this geometrically constrained system obeys the laws of the general Hamiltonian formulation and the undetermined Lagrange multipliers. Therefore, the respective dynamical equations are adopted for the convex optimization phase:
+Under the minimal action principle and non-holonomic constraints (that can be transformed into holonomic), this geometrically constrained system also obeys the laws of the general Hamiltonian formulation and the undetermined Lagrange multipliers. To enforce the geometrical constraint, the lengths of the distance vectors between the bodies must be conserved.
 
-\begin{align}
-    \frac{\partial \mathbf{q}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{p}_\theta} \\
-    \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= - \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta}
-\end{align}
+\begin{align*}
+    \frac{d}{dt} \left( \norm{q_{\theta\alpha} - q_{\theta\beta}}_2\right) = 0
+\end{align*}
+
+Thus, we define the following normed metric matrix to account for this property:
+
+\begin{align*}
+    \mathcal{C}_{\alpha\beta}(\mathbf{q}_\theta, t) &= \norm{q_{\theta\alpha} - q_{\theta\beta}}_2 \\
+    \dot{\mathcal{C}_{\alpha\beta}}\left(\mathbf{q}_\theta, t\right) &= \nabla_{\mathbf{q}_\theta} \mathcal{C}_{\alpha\beta} \cdot \dot{\mathbf{q}_\theta} + \frac{\partial \mathcal{C}_{\alpha\beta}}{\partial t} = 0
+\end{align*}
+
+and use it as a constraint matrix:
+
+\begin{align*}
+    \sigma_{\alpha\beta} = \mathcal{C}_{\alpha\beta} \left(\mathbf{q}_\theta, t\right) &- \mathcal{C}_{\alpha\beta}\left(\mathbf{q}_\theta, 0\right) = 0 \\
+\end{align*}
 
 We finally define the following loss function to solve the PDE system:
 
 \begin{align}
-    \mathcal{L}_{PDE} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H}\right) dt}_2^2 + \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2
+    \mathcal{L}_{p}(t; \theta) &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \left\{\sum_{\beta\neq\alpha} \lambda_{\alpha\beta}\sigma_{\alpha\beta}\right\}_{\alpha = 1}^{3N}\right) dt}_2^2 \\
+    \mathcal{L}_{q}(t; \theta) &= \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2 \\
+    \mathcal{L}_{PDE} &= \mathcal{L}_{p} + \mathcal{L}_{q}
 \end{align}
+
+
 \subsection{Results}
 
 \section{Conclusion}
@@ -232,7 +254,7 @@ being $\mathcal{L}$ the Lagrangian:
     We can develop this formulation to get the Euler-Lagrange equation:
     \begin{align}
         \delta A\left[ \matbf{q}(t) \right] &= \delta \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt \\
-        0 = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)dt &= \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta q \right) \Big|_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}  \right) \delta q dt
+        0 = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)dt &= \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} \right) \Big|_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}  \right) \delta \mathbf{q} dt
     \end{align}
     Given the conditions of the Least Action Principle, the first term vanishes, leaving the second term equal to zero, leading to the Euler-Lagrange equation:
     \begin{equation}
