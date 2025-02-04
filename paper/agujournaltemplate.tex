@@ -105,7 +105,7 @@ By synthesizing principles from classical mechanics, numerical analysis, and sta
 \cite{raissi2017physicsinformeddeeplearning} introduces Physics-Informed Neural Networks (PINNs) as a novel approach to solving problems governed by partial differential equations (PDEs). PINNs incorporate the underlying physical laws, expressed as PDEs, directly into the neural network's loss function, enabling them to learn solutions while respecting the governing equations. This eliminates the need for labeled data, relying instead on the residuals of the PDEs to guide the training. The study demonstrates the application of PINNs to a variety of forward and inverse problems, such as fluid dynamics and heat conduction. The framework is particularly useful for problems with limited observational data or where traditional numerical solvers are computationally expensive. PINNs offer a generalizable and efficient alternative for modeling complex physical systems.
 
 \section{General problem statement}
-On a closed system, the governing laws are described by the minimal action principle. The current work adheres to this principle as it derives the Euler-Lagrange equations, from which we can induce a Legendre transform that turns into the hamiltonian formulation. Different historical problem are restricted by different types of constraints (holonomic and non-holonomic), that's why in each section defines its own separated problem with different kinds of boundary conditions (Dirichlet and Neumann boundary conditions). Moreover, the general coordinate systems will vary, so the following description are only valid for the cartesian scenario.
+On a closed system, the governing laws are described by the minimal action principle. The current work adheres to this principle as it derives the Euler-Lagrange equations, from which we can induce a Legendre transform that turns into the Hamiltonian formulation. Different historical problem are restricted by different types of constraints (holonomic and non-holonomic), that's why in each section defines its own separated problem with different kinds of boundary conditions (Dirichlet and Neumann boundary conditions). Moreover, the general coordinate systems will vary, so the following description are only valid for the cartesian scenario.
 
 In this case, we generally adhere to the classical gravitational potential function for the $N$ bodies and kinetic energy transformed to the desired phase space:
 \begin{align}
@@ -160,22 +160,18 @@ Under the minimal action principle and holonomic constraints, this geometrically
 
 \begin{align}
     \frac{\partial \mathbf{q}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{p}_\theta} \\
-    \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= - \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta} - \sum_{\alpha = 1}^{N_c} \lambda_\alpha \sigma_\alpha
+    - \frac{\partial \mathbf{p}_\theta}{\partial \theta} \odot \frac{\partial \theta}{\partial t} &= \frac{\partial \mathcal{H}}{\partial \mathbf{q}_\theta} + \sum_{k = 1}^{N_c} \lambda_k \frac{\partial \sigma_k}{\partial \mathbf{q}_\theta}
 \end{align}
-for some set of $N_c$ functions $\sigma_\alpha$ defined as follows:
-\begin{align*}
-    \sigma_\alpha \colon \mathbb{R}^{3N + 1} \to \mathbb{R} \\
-    \sigma_\alpha \left( \mathbf{q}, t \right) = 0
-\end{align*}
+
 These holonomic constraints will be enforced for a set $\mathcal{Q}$ of cardinality $n \colon n \in \mathbb{N} \wedge n < N$. The set $\mathcal{Q}$ contains the generalized coordinates corresponding to bodies whose positions remain static. This reduces the degrees of freedom of the system by $3n$. Hence, for an indexed set $\left\{\alpha_i\right\} \colon \alpha_i \in \mathbb{N} \wedge q_{\theta\alpha_i} \in \mathcal{Q}$ with the same cardinality as $\mathcal{Q}$, to enforce the static behavior of the $n$ bodies, we define the following constraint:
 \begin{align*}
-    \sigma_\alpha(\mathbf{q}, t) = \norm{q_{\theta\alpha}(t) - q_{\theta\alpha}(0)}_2
+    \sigma_k(\mathbf{q}, t) = \norm{q_{\theta k}(t) - q_{\theta k}(0)}_2
 \end{align*}
 
 We finally define the following loss function to solve the PDE system:
 
 \begin{align}
-    \mathcal{L}_{p} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \sum_{\beta \in \left\{\alpha\right\}} \lambda_\beta \sigma_\beta \right) dt}_2^2 \\
+    \mathcal{L}_{p} &= \norm{\int_0^t \left(- \nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \sum_{k = 1}^{N_c} \lambda_k \nabla_{\mathbf{q}_\theta} \sigma_k\right) dt}_2^2 \\
     \mathcal{L}_{q} &= \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2 \\
     \mathcal{L}_{PDE} &= \mathcal{L}_1 + \mathcal{L}_2
 \end{align}
@@ -205,7 +201,7 @@ and use it as a constraint matrix:
 We finally define the following loss function to solve the PDE system:
 
 \begin{align}
-    \mathcal{L}_{p}(t; \theta) &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \left\{\sum_{\beta\neq\alpha} \lambda_{\alpha\beta}\sigma_{\alpha\beta}\right\}_{\alpha = 1}^{3N}\right) dt}_2^2 \\
+    \mathcal{L}_{p}(t; \theta) &= \norm{\int_0^t \left(\nabla_\theta \mathbf{p}_\theta \odot \dot{\theta} + \nabla_{\mathbf{q}_\theta} \mathcal{H} + \sum_{\substack{\alpha, \beta \\ \alpha \neq \beta}} \lambda_{\alpha\beta} \nabla_{\mathbf{q}_\theta} \sigma_k\right) dt}_2^2 \\
     \mathcal{L}_{q}(t; \theta) &= \norm{\int_0^t \left(\nabla_\theta \mathbf{q}_\theta \odot \dot{\theta} - \nabla_{\mathbf{p}_\theta} \mathcal{H}\right) dt}^2_2 \\
     \mathcal{L}_{PDE} &= \mathcal{L}_{p} + \mathcal{L}_{q}
 \end{align}
@@ -236,7 +232,7 @@ In conclusion, this work demonstrates the potential of physics-informed neural n
 \begin{definition}[The Action Integral]
     The action is a scalar quantity describing the balance between the kinetic and potential energy in a physical system. It can be described as follows given some generalized coordinates $\mathbf{q}$:
     \begin{align}
-        A\left[ \matbf{q}(t) \right] = \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt
+        A\left[ \mathbf{q}(t) \right] = \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt
     \end{align}
 \end{definition}
 
@@ -248,22 +244,28 @@ being $\mathcal{L}$ the Lagrangian:
 
 \begin{definition}[The Principle of Least Action]
     The Principle of Least Action states that a path taken by a physical system has a stationary values for the system's action. This means, similar paths near one another have very similar action values.
-    \begin{align}
-        \delta A\left[ \matbf{q}(t) \right] = 0
-    \end{align}
-    We can develop this formulation to get the Euler-Lagrange equation:
-    \begin{align}
-        \delta A\left[ \matbf{q}(t) \right] &= \delta \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt \\
-        0 = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)dt &= \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} \right) \Big|_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}  \right) \delta \mathbf{q} dt
-    \end{align}
-    Given the conditions of the Least Action Principle, the first term vanishes, leaving the second term equal to zero, leading to the Euler-Lagrange equation:
-    \begin{equation}
-        \frac{\partial \mathcal{L}}{\partial \mathbf{q}} = \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}
-    \end{equation}
+
+\begin{align}
+    \delta A\left[ \mathbf{q}(t) \right] = 0
+\end{align}
+We can develop this formulation to get the Euler-Lagrange equation:
+\begin{align}
+    \delta A\left[ \mathbf{q}(t) \right] &= \delta \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt \\
+    0 = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)dt &= \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} \right) \Big\vert_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}  \right) \cdot \delta \mathbf{q} dt
+\end{align}
+
+Given the conditions of the Least Action Principle, the first term vanishes, leaving the second term equal to zero, leading to the Euler-Lagrange equation:
+
+\begin{equation}
+    \frac{\partial \mathcal{L}}{\partial \mathbf{q}} = \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}
+\end{equation}
+
 \end{definition}
 
 \section{The Hamiltonian Formulation}
+
 We first introduce a Legendre tranformation to the Lagrangian given the following equality:
+
 \begin{align}
     \mathbf{p} = \frac{\partial \mathcal{L}}{\partial \mathbf{q}}
 \end{align}
@@ -282,39 +284,75 @@ We can rewrite the Lagrangian in terms of the momenta $\mathbf{p}$ as follows:
     \hat{\mathcal{L}}(\mathbf{q}, \mathbf{p}) &= - \sum_{i = 1}^{3N} \frac{p_i}{2m_i} - U(\mathbf{q})
 \end{align}
 
-The negative of this transformation ($-\hat{\mathcal{L}}$) is the hamiltonian $\mathcal{H}$, if we replace it in the Euler-Lagrange equations, we can induce the mechanical equations:
+The negative of this transformation ($-\hat{\mathcal{L}}$) is the Hamiltonian $\mathcal{H}$, if we replace it in the Euler-Lagrange equations, we can induce the mechanical equations:
+
 \begin{align}
     \dot{\mathbf{q}} &= \nabla_\mathbf{p} \mathcal{H} \\
     \dot{\mathbf{p}} &= - \nabla_\mathbf{q} \mathcal{H}
 \end{align}
+
 \begin{definition}[Properties of the Hamiltonian]
-    The hamiltonian formulation leads to all the foundational energy principles as it represents the total energy of a system.
-    \begin{align}
-        \frac{d\mathcal{H}}{dt} = \nabla_\mathbf{q} \mathcal{H} \cdot \dot{\mathbf{q}} + \nabla_\mathbf{p} \mathcal{H} \cdot \dot{\mathbf{p}} = - \mathbf{p} \cdot \dot{\mathbf{q}} + \dot{\mathbf{q}} \cdot \dot{\mathbf{p}} = 0
-    \end{align}
-    This means that the total energy of a closed hamiltonian system is conserved through time.
-    Moreover, if we compute the divergence of a velocity field described within the hamiltonian formulation:
+    The Hamiltonian formulation leads to all the foundational energy principles as it represents the total energy of a system.
+
+\begin{align}
+    \frac{d\mathcal{H}}{dt} = \nabla_\mathbf{q} \mathcal{H} \cdot \dot{\mathbf{q}} + \nabla_\mathbf{p} \mathcal{H} \cdot \dot{\mathbf{p}} = - \mathbf{p} \cdot \dot{\mathbf{q}} + \dot{\mathbf{q}} \cdot \dot{\mathbf{p}} = 0
+\end{align}
+
+This means that the total energy of a closed Hamiltonian system is conserved through time.
+Moreover, if we compute the divergence of a velocity field described within the Hamiltonian formulation:
+
 \begin{align}
     \mathbf{x} &= (\mathbf{q}, \mathbf{p}) \\
     \dot{\mathbf{x}} &= (\dot{\mathbf{q}}, \dot{\mathbf{p}}) \\
     \nabla_\mathbf{x} \cdot \dot{\mathbf{x}} = \nabla_\mathbf{q} \cdot \dot{\mathbf{q}} + \nabla_\mathbf{p} \cdot \dot{\mathbf{p}} &= \nabla_\mathbf{q} \cdot \nabla_\mathbf{p} \mathcal{H} - \nabla_\mathbf{p} \cdot \nabla_\mathbf{q} \mathcal{H} = 0 \\
     \nabla_\mathbf{x} \cdot \dot{\mathbf{x}} &= 0
 \end{align}
-This defines the incompressibility ($\nabla \cdot u = 0$) of a hamiltonian system.
+
+This defines the incompressibility ($\nabla \cdot u = 0$) of a Hamiltonian system.
 
 %% symplectic structure
 
 \section{Constrained Hamiltonian formulation}
 
-%% holonomic constrains
-%% non-holonomic constrains
-%% gauss constrained
+For this research's scope, we use the holonomic constraint theory. An holonomic constraint is a restriction imposed over a physical system that can be expressible as a function of the generelized coordinates and time independently from the generalized velocity:
+\begin{align*}
+    \sigma_k \left( \mathbf{q}, t \right) = 0
+\end{align*}
+Building the dynamical equations for the holonomically constrained version of the classical formulation implies using the Lagrange undetermined multipliers. In order to factor out the differential term $\delta q$ to reduce the convergence of the inner factor to $0$, the constraints must be expressible in a differential form of the following nature:
 
-\section{Numerical methods}
+\begin{align*}
+    \sum_{\alpha = 1}^{3N} a_{k\alpha} dq_\alpha + a_{kt}dt = 0
+\end{align*}
 
-% shake
-%% rattle
-%% runga-kutta
+In this case, we can express the holonomic constraints in the following form given the first order Taylor's expansion of $d\sigma_k$.
+
+\begin{align}
+    d\sigma_k = \sum_{\alpha = 1}^{3N} \frac{\partial \sigma_k}{\partial q_\alpha} dq_\alpha + \frac{\partial \sigma_k}{\partial t} dt = \nabla_{\mathbf{q}} \sigma_k \cdot d\mathbf{q} + \frac{\partial \sigma_k}{\partial t} dt
+\end{align}
+
+Such that we can introduce the following definition of the constraint action and solve for its stationarity:
+
+\begin{align*}
+    \delta A &= \delta \int_{t_1}^{t_2} \left( \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}) + \sum_{k = 1}^{N_c} \lambda_k \sigma_k\right)dt = 0 \\
+    \delta A &= \int_{t_1}^{t_2} \left(\nabla_{\mathbf{q}} \mathcal{L} \cdot \delta \mathbf{q} + \nabla_{\dot{\mathbf{q}}} \mathcal{L} \cdot \delta \dot{\mathbf{q}} + \sum_{k = 1}^{N_c} \lambda_k \left( \nabla_{\mathbf{q}} \sigma_k \cdot \delta \mathbf{q} + \frac{\partial \sigma_k}{\partial t} \delta t\right)\right) dt \\
+    \delta A &= \left(\frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)\Big\vert_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \nabla_\mathbf{q} \mathcal{L} \cdot \delta \mathbf{q} - \frac{d}{dt}\left( \nabla_{\dot{\mathbf{q}}} \mathcal{L}\right) \cdot \delta \mathbf{q} + \sum_{k = 1}^{N_c} \left( \lambda_k \nabla_{\mathbf{q}} \sigma_k \cdot \delta \mathbf{q}\right)\right) dt + \int_{t_1}^{t_2} \sum_{k = 1}^{N_c} \left( \lambda_k \frac{\partial \sigma_k}{\partial t} \delta t \right) dt \\
+    \delta A &= \int_{t_1}^{t_2} \left( \nabla_\mathbf{q} \mathcal{L} - \frac{d}{dt}\left( \nabla_{\dot{\mathbf{q}}} \mathcal{L}\right) + \sum_{k = 1}^{N_c} \left( \lambda_k \nabla_{\mathbf{q}} \sigma_k \right)\right) \cdot \delta \mathbf{q} dt = 0 \\
+    &\frac{d}{dt}\left( \nabla_{\dot{\mathbf{q}}} \mathcal{L}\right) - \nabla_\mathbf{q} \mathcal{L} = \sum_{k = 1}^{N_c} \left( \lambda_k \nabla_{\mathbf{q}} \sigma_k \right)
+\end{align*}
+
+By replacing the Hamiltonian into the equation we get the Hamiltonian formulation for holonomic constraints.
+
+\begin{align*}
+    \dot{\mathbf{q}} &= \nabla_{\mathbf{p}} \mathcal{H} \\
+    - \dot{\mathbf{p}} &= \nabla_{\mathbf{q}} \mathcal{H} + \sum_{k = 1}^{N_c} \lambda_k \nabla_{\mathbf{q}} \sigma_k
+\end{align*}
+
+\section{Symplectic integrators}
+
+Symplectic integrators consist of a numerical integration set that follows Hamiltonian dynamics.
+%% symplectic integrators
+%% Leapfrog
+%% SHAKE for holonomic constraints
 
 \end{definition}
 

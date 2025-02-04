@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex agujournaltemplate"] 1737779057.95618 "agujournaltemplate.aux" "agujournaltemplate.bbl" "agujournaltemplate" 1738053213.45286 0
+["bibtex agujournaltemplate"] 1737779057.95618 "agujournaltemplate.aux" "agujournaltemplate.bbl" "agujournaltemplate" 1738640449.50232 0
   "./agusample.bib" 1737286150.55805 4820 ea09a1e3b82597a637b2bb2946b1a2e9 ""
   "/usr/share/texmf-dist/bibtex/bst/apacite/apacite.bst" 1736268207 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "agujournaltemplate.aux" 1738053213.27486 3951 b06f25afb280966948a9ce283a264c65 "pdflatex"
+  "agujournaltemplate.aux" 1738640449.33953 3957 68d1e7706246c19e34f920ecd53061b8 "pdflatex"
   (generated)
   "agujournaltemplate.bbl"
   "agujournaltemplate.blg"
   (rewritten before read)
-["pdflatex"] 1738053212.94444 "agujournaltemplate.tex" "agujournaltemplate.pdf" "agujournaltemplate" 1738053213.45301 2
+["pdflatex"] 1738640449.00572 "agujournaltemplate.tex" "agujournaltemplate.pdf" "agujournaltemplate" 1738640449.50247 2
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1736268207 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1736268207 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -116,9 +116,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1737111138.53132 5318467 8236939515598d005dfbcc2e1a40f206 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1737111114 7112999 a088e0b848ee72b78c3e0fdf06374499 ""
   "agujournal2019.cls" 1731367162 40688 b442a0d4e8a299883855595037ff6651 ""
-  "agujournaltemplate.aux" 1738053213.27486 3951 b06f25afb280966948a9ce283a264c65 "pdflatex"
+  "agujournaltemplate.aux" 1738640449.33953 3957 68d1e7706246c19e34f920ecd53061b8 "pdflatex"
   "agujournaltemplate.bbl" 1737779057.99559 7476 efd870ad05ff8e138a46f5b45c3512d8 "bibtex agujournaltemplate"
-  "agujournaltemplate.tex" 1738053212.05487 26524 4763d4a0bce5389cd6ed1d9c71479a4c ""
+  "agujournaltemplate.tex" 1738640447.87621 29419 ab55742c044ef016b48bbccf0f0a01d9 ""
   "trackchanges.sty" 1731367162 26287 09689e5e9db973d136f0537b8570fadf ""
   (generated)
   "agujournaltemplate.aux"
