@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  4 FEB 2025 00:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  4 FEB 2025 23:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1081,141 +1081,202 @@ Overfull \hbox (10.23793pt too wide) in paragraph at lines 245--247
  []
 
 [7]
-Overfull \hbox (2.05727pt too wide) in paragraph at lines 257--258
+Overfull \hbox (2.05727pt too wide) in paragraph at lines 259--260
 []\OT1/cmr/m/n/10 Given the con-di-tions of the Least Ac-tion Prin-ci-ple, the first term van-ishes, leav- 
  []
 
 
-./agujournaltemplate.tex:263: LaTeX Error: \begin{document} ended by \end{definition}.
+./agujournaltemplate.tex:265: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.263 \end{definition}
+l.265 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (2.40457pt too wide) in paragraph at lines 267--268
+Overfull \hbox (2.40457pt too wide) in paragraph at lines 269--270
 []\OT1/cmr/m/n/10 We first in-tro-duce a Leg-en-dre tran-for-ma-tion to the La-grangian given the fol-low- 
  []
 
 
-Overfull \hbox (10.92682pt too wide) in paragraph at lines 287--288
+Overfull \hbox (10.92682pt too wide) in paragraph at lines 289--290
 []\OT1/cmr/m/n/10 The neg-a-tive of this trans-for-ma-tion ($\OMS/cmsy/m/n/10 ^^@[]$\OT1/cmr/m/n/10 ) is the Hamil-to-nian $\OMS/cmsy/m/n/10 H$\OT1/cmr/m/n/10 , if we re-place it in 
  []
 
 
-./agujournaltemplate.tex:294: LaTeX Error: Environment definition undefined.
+./agujournaltemplate.tex:296: LaTeX Error: Environment definition undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 \begin{definition}
+l.296 \begin{definition}
                         [Properties of the Hamiltonian]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (13.34912pt too wide) in paragraph at lines 294--296
+Overfull \hbox (13.34912pt too wide) in paragraph at lines 296--298
 []\OT1/cmr/m/n/10 [Properties of the Hamil-to-nian] The Hamil-to-nian for-mu-la-tion leads to all the foun- 
  []
 
-
-Overfull \hbox (28.7657pt too wide) in paragraph at lines 301--303
+[8]
+Overfull \hbox (28.7657pt too wide) in paragraph at lines 303--305
 []\OT1/cmr/m/n/10 This means that the to-tal en-ergy of a closed Hamil-to-nian sys-tem is con-served through 
  []
 
 
-Overfull \hbox (31.12679pt too wide) in paragraph at lines 301--303
+Overfull \hbox (31.12679pt too wide) in paragraph at lines 303--305
 \OT1/cmr/m/n/10 time. More-over, if we com-pute the di-ver-gence of a ve-loc-ity field de-scribed within the Hamil- 
  []
 
-[8]
-Overfull \hbox (2.51558pt too wide) in paragraph at lines 317--318
+
+Overfull \hbox (2.51558pt too wide) in paragraph at lines 319--320
 []\OT1/cmr/m/n/10 For this re-search's scope, we use the holo-nomic con-straint the-ory. An holo-nomic 
  []
 
 
-Overfull \hbox (1.6545pt too wide) in paragraph at lines 317--318
+Overfull \hbox (1.6545pt too wide) in paragraph at lines 319--320
 \OT1/cmr/m/n/10 con-straint is a re-stric-tion im-posed over a phys-i-cal sys-tem that can be ex-press-ible as a 
  []
 
 
-Overfull \hbox (10.84904pt too wide) in paragraph at lines 317--318
+Overfull \hbox (10.84904pt too wide) in paragraph at lines 319--320
 \OT1/cmr/m/n/10 func-tion of the genere-lized co-or-di-nates and time in-de-pen-dently from the gen-er-al-ized ve- 
  []
 
 
-Overfull \hbox (8.6269pt too wide) in paragraph at lines 320--322
+Overfull \hbox (8.6269pt too wide) in paragraph at lines 322--324
 \OT1/cmr/m/n/10 Building the dy-nam-i-cal equa-tions for the holo-nom-i-cally con-strained ver-sion of the clas- 
  []
 
 
-Overfull \hbox (7.32129pt too wide) in paragraph at lines 320--322
+Overfull \hbox (7.32129pt too wide) in paragraph at lines 322--324
 \OT1/cmr/m/n/10 si-cal for-mu-la-tion im-plies us-ing the La-grange un-de-ter-mined mul-ti-pli-ers. In or-der to fac- 
  []
 
 
-Overfull \hbox (1.07806pt too wide) in paragraph at lines 320--322
+Overfull \hbox (1.07806pt too wide) in paragraph at lines 322--324
 \OT1/cmr/m/n/10 tor out the dif-fer-en-tial term $\OML/cmm/m/it/10 ^^Nq$ \OT1/cmr/m/n/10 to re-duce the con-ver-gence of the in-ner fac-tor to $0$, the 
  []
 
 
-Overfull \hbox (7.87671pt too wide) in paragraph at lines 327--328
+Overfull \hbox (7.87671pt too wide) in paragraph at lines 329--330
 []\OT1/cmr/m/n/10 In this case, we can ex-press the holo-nomic con-straints in the fol-low-ing form given 
  []
 
 
-Overfull \hbox (24.0157pt too wide) in paragraph at lines 333--334
+Overfull \hbox (24.0157pt too wide) in paragraph at lines 335--336
 []\OT1/cmr/m/n/10 Such that we can in-tro-duce the fol-low-ing def-i-ni-tion of the con-straint ac-tion and solve 
  []
 
 
-Overfull \hbox (56.49487pt too wide) detected at line 341
+Overfull \hbox (56.49487pt too wide) detected at line 343
 []
  []
 
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 341--341
+Overfull \hbox (24.0pt too wide) in paragraph at lines 343--343
 []  
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3118) has occurred while \output is active []
 
  [9]
-Overfull \hbox (4.87685pt too wide) in paragraph at lines 343--344
+Overfull \hbox (4.87685pt too wide) in paragraph at lines 345--346
 []\OT1/cmr/m/n/10 By re-plac-ing the Hamil-to-nian into the equa-tion we get the Hamil-to-nian for-mu-la- 
  []
 
 
-Overfull \hbox (0.90454pt too wide) in paragraph at lines 352--356
-[]\OT1/cmr/m/n/10 Symplectic in-te-gra-tors con-sist of a nu-mer-i-cal in-te-gra-tion set that fol-lows Hamil- 
+Overfull \hbox (6.2101pt too wide) in paragraph at lines 354--355
+[]\OT1/cmr/m/n/10 Symplectic in-te-gra-tors con-sist of a set of nu-mer-i-cal meth-ods that fol-low the sym- 
  []
 
 
-./agujournaltemplate.tex:357: LaTeX Error: \begin{document} ended by \end{definition}.
+Overfull \hbox (5.9047pt too wide) in paragraph at lines 354--355
+\OT1/cmr/m/n/10 plec-tic man-i-fold struc-ture of the Hamil-to-nian. The most foun-da-tional sym-plec-tic al-go- 
+ []
+
+
+Overfull \hbox (11.57124pt too wide) in paragraph at lines 354--355
+\OT1/cmr/m/n/10 rithm is the Ver-let ve-loc-ity al-go-rithm. In or-der to demon-strate this fact and de-duce the 
+ []
+
+
+Overfull \hbox (12.26567pt too wide) in paragraph at lines 354--355
+\OT1/cmr/m/n/10 Ver-let al-go-rithm and its de-rived al-go-rithms, we must take for granted Trot-ter's the-o-rem 
+ []
+
+
+Overfull \hbox (7.68231pt too wide) in paragraph at lines 354--355
+\OT1/cmr/m/n/10 for op-er-a-tors and de-fine Pois-son's brack-ets as well as Li-ou-ville op-er-a-tors in the con-text 
+ []
+
+
+Overfull \hbox (16.00967pt too wide) in paragraph at lines 356--357
+[]\OT1/cmr/m/n/10 Let's de-fine some vec-tor $\OML/cmm/m/it/10 a$ \OT1/cmr/m/n/10 in terms of the pa-ram-e-ter-ized gen-eral co-or-di-nates $(\OT1/cmr/bx/n/10 q\OML/cmm/m/it/10 ; \OT1/cmr/bx/n/10 p\OT1/cmr/m/n/10 )$, 
+ []
+
+
+Overfull \hbox (1.75388pt too wide) in paragraph at lines 362--363
+[]\OT1/cmr/m/n/10 This ex-pres-sion $[]$ is the Pois-son brack-ets for two vec-tors $\OML/cmm/m/it/10 a$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 b$\OT1/cmr/m/n/10 . Note that 
+ []
+
+
+Overfull \hbox (2.46002pt too wide) in paragraph at lines 364--365
+[]\OT1/cmr/m/n/10 We can in-ter-pret the Pois-son bracket in terms of a dif-fer-en-tial op-er-a-tor given its 
+ []
+
+
+Overfull \hbox (12.57938pt too wide) in paragraph at lines 370--371
+[]\OT1/cmr/m/n/10 This is the Li-ou-ville op-er-a-tor act-ing on $\OML/cmm/m/it/10 a$\OT1/cmr/m/n/10 . Solv-ing this dif-fer-en-tial equa-tion can be 
+ []
+
+
+Overfull \hbox (11.1684pt too wide) in paragraph at lines 376--377
+[]\OT1/cmr/m/n/10 Given the na-ture of the def-i-ni-tion, we can write this op-er-a-tor in terms of a sum of 
+ []
+
+[10]
+Overfull \hbox (10.11282pt too wide) in paragraph at lines 388--389
+[]\OT1/cmr/m/n/10 Given that these op-er-a-tors are gen-er-ally non-commuting, we can't ex-press the op- 
+ []
+
+
+Overfull \hbox (6.5989pt too wide) in paragraph at lines 390--391
+[]\OT1/cmr/m/n/10 Given this con-straint, the us-age of Trot-ter's the-o-rem is in-evitable. Given two op- 
+ []
+
+
+Overfull \hbox (1.7101pt too wide) in paragraph at lines 426--427
+[]\OT1/cmr/m/n/10 So, the op-er-a-tor for a gen-er-al-ized Hamil-to-nian sys-tem could be de-scribed as fol- 
+ []
+
+[11]
+
+./agujournaltemplate.tex:435: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.357 \end{definition}
+l.435 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./agujournaltemplate.tex:376: Missing delimiter (. inserted).
+./agujournaltemplate.tex:454: Missing delimiter (. inserted).
 <to be read again> 
                    \tex_par:D 
-l.376     \notation{$\mathcal{S} \left[f\right]$}
+l.454     \notation{$\mathcal{S} \left[f\right]$}
                                                   $ Functional $\mathcal{S}$...
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1224,10 +1285,10 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-./agujournaltemplate.tex:376: Missing $ inserted.
+./agujournaltemplate.tex:454: Missing $ inserted.
 <inserted text> 
                 $
-l.376     \notation{$\mathcal{S} \left[f\right]$}
+l.454     \notation{$\mathcal{S} \left[f\right]$}
                                                   $ Functional $\mathcal{S}$...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1248,9 +1309,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--34
  []
 
 
-Underfull \vbox (badness 2922) has occurred while \output is active []
-
- [10]
 Underfull \hbox (badness 3724) in paragraph at lines 48--61
 []\OT1/cmr/m/n/10 Chenciner, A., & Mont-gomery, R.  (2000).  A re-mark-able pe-ri-odic so-lu-tion of the 
  []
@@ -1285,7 +1343,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--193
 \OT1/cmr/m/n/10 Re-trieved from $\OT1/cmtt/m/n/10 http :// dx [] .doi [] .org / 10 [] .1016 / j [] .newast [] .2022 [] .101850$   \OT1/cmr/m/n/10 doi: 
  []
 
-
+[12]
 Underfull \hbox (badness 1478) in paragraph at lines 253--265
 \OT1/cmr/m/it/10 ing (part i): Data-driven so-lu-tions of non-lin-ear par-tial dif-fer-en-tial equa-tions.  \OT1/cmr/m/n/10 Re- 
  []
@@ -1295,7 +1353,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 277--289
 \OT1/cmr/m/it/10 36\OT1/cmr/m/n/10 , 105--179.  (Sund-man's proof of a con-ver-gent se-ries so-lu-tion for the three-body 
  []
 
-) [11] (./agujournaltemplate.aux)
+) [13] (./agujournaltemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1307,18 +1365,18 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 5500 strings out of 476076
- 83630 string characters out of 5793775
- 1946187 words of memory out of 5000000
- 27491 multiletter control sequences out of 15000+600000
+ 5502 strings out of 476076
+ 83688 string characters out of 5793775
+ 1947187 words of memory out of 5000000
+ 27493 multiletter control sequences out of 15000+600000
  568776 words of font info for 76 fonts, out of 8000000 for 9000
  20 hyphenation exceptions out of 8191
- 72i,15n,79p,1391b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on agujournaltemplate.pdf (11 pages, 319340 bytes).
+ 72i,15n,79p,1391b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on agujournaltemplate.pdf (13 pages, 338710 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 178 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

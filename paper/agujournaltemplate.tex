@@ -248,7 +248,9 @@ being $\mathcal{L}$ the Lagrangian:
 \begin{align}
     \delta A\left[ \mathbf{q}(t) \right] = 0
 \end{align}
+
 We can develop this formulation to get the Euler-Lagrange equation:
+
 \begin{align}
     \delta A\left[ \mathbf{q}(t) \right] &= \delta \int_{t_1}^{t_2} \mathcal{L}\left(\mathbf{q}, \dot{\mathbf{q}}, t\right) dt \\
     0 = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \cdot \delta \dot{\mathbf{q}} \right)dt &= \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} \cdot \delta \mathbf{q} \right) \Big\vert_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}  \right) \cdot \delta \mathbf{q} dt
@@ -349,10 +351,86 @@ By replacing the Hamiltonian into the equation we get the Hamiltonian formulatio
 
 \section{Symplectic integrators}
 
-Symplectic integrators consist of a numerical integration set that follows Hamiltonian dynamics.
-%% symplectic integrators
-%% Leapfrog
-%% SHAKE for holonomic constraints
+Symplectic integrators consist of a set of numerical methods that follow the symplectic manifold structure of the Hamiltonian. The most foundational symplectic algorithm is the Verlet velocity algorithm. In order to demonstrate this fact and deduce the Verlet algorithm and its derived algorithms, we must take for granted Trotter's theorem for operators and define Poisson's brackets as well as Liouville operators in the context of Hamiltonian mechanics.
+
+Let's define some vector $a$ in terms of the parameterized general coordinates $(\mathbf{q}, \mathbf{p})$, such that we can study the first derivative of $a$:
+
+\begin{align*}
+    \frac{da}{dt} = \nabla_{\mathbf{q}} a \cdot \dot{\mathbf{q}}+ \nabla_{\mathbf{p}} a \cdot \dot{\mathbf{p}} = \nabla_{\mathbf{q}} a \cdot \nabla_{\mathbf{p}} \mathcal{H} - \nabla_{\mathbf{p}} a \cdot \nabla_{\mathbf{q}} \mathcal{H} = \left\{ a, \mathcal{H}\right\}
+\end{align*}
+
+This expression $\left\{ a, b\right\}$ is the Poisson brackets for two vectors $a$ and $b$. Note that $\frac{d\mathcal{H}}{dt} = \left\{ \mathcal{H}, \mathcal{H} \right\} = 0$ defines the conservative nature of the Hamiltonian.
+
+We can interpret the Poisson bracket in terms of a differential operator given its convenient form:
+
+\begin{align*}
+    iLa = \left\{ a, \mathcal{H} \right\}
+\end{align*}
+
+This is the Liouville operator acting on $a$. Solving this differential equation can be done elegantly with foundational differential equation theory:
+
+\begin{align*}
+    a(x) = e^{iLt}a(x(0))
+\end{align*}
+
+Given the nature of the definition, we can write this operator in terms of a sum of differential operators of the following form:
+\begin{align*}
+    iL = \sum_k iL_k
+.\end{align*}
+
+So, for this case we define $iL = iL_1 + iL_2$ such that:
+
+\begin{align*}
+    iL_1 = \nabla_{\mathbf{p}} \mathcal{H} \cdot \nabla_{\mathbf{q}} \\
+    iL_2 = - \nabla_{\mathbf{q}} \mathcal{H} \cdot \nabla_{\mathbf{p}}
+.\end{align*}
+
+Given that these operators are generally non-commuting, we can't express the operator in the form $e^{iL} = e^{iL_1 + iL_2} = e^{iL_1}e^{iL_2}$ because the order of operability changes the result. This is, $\left[ L_1, L_2\right] = L_1L_2 - L_2L_1 \neq 0$, this operation is known as the commutator and is widely used in both classical and quantum mechanics.
+
+Given this constraint, the usage of Trotter's theorem is inevitable. Given two operators $A$ and $B$ for which commutation is not zero ($\left[ A, B \right] \neq 0$) Trotter theorem describes:
+
+\begin{align*}
+    e^{A + B} = \lim_{n \to \infty} \left[ e^{B / 2n} e^{A / n} e^{B / 2n} \right]^n
+\end{align*}
+
+Therefore, for $e^{iLt}$, and introducing $\Delta t = \frac{t}{n}$, we have:
+
+\begin{align*}
+    e^{(iL_1 + iL_2) t} = \lim_{\substack{n \to \infty \\ \Delta t \to 0}} \left[ e^{iL_2 \Delta t / 2} e^{iL_1 \Delta t} e^{iL_2 \Delta t / 2} \right]^n
+\end{align*}
+
+We can make a good approximation for a finite $n$:
+
+\begin{align*}
+    e^{(iL_1 + iL_2) t} \approx \left[ e^{iL_2 \Delta t / 2} e^{iL_1 \Delta t} e^{iL_2 \Delta t / 2} \right]^n + \mathcal{O}(n \Delta t^3)
+\end{align*}
+
+By taking the $\frac{1}{n}$ power on both sides of the equation, we get:
+
+\begin{align*}
+    e^{(iL_1 + iL_2) \Delta t} \approx e^{iL_2 \Delta t / 2} e^{iL_1 \Delta t} e^{iL_2 \Delta t / 2} + \mathcal{O}(\Delta t^3)
+\end{align*}
+
+For our case we got:
+
+\begin{align*}
+    e^{iL\Delta t} \approx e^{- \frac{1}{2} i\nabla_{\mathbf{q}} \mathcal{H} \cdot \nabla_{\mathbf{p}}}e^{i\nabla_{\mathbf{p}} \mathcal{H} \cdot \nabla_{\mathbf{q}}}e^{- \frac{1}{2} i\nabla_{\mathbf{q}} \mathcal{H} \cdot \nabla_{\mathbf{p}}}
+\end{align*}
+
+If we expand an expression of the form $e^{c\nabla_{x}} g(x)$:
+
+\begin{align*}
+    e^{c\nabla_x} g(x) = \sum_{n = 1}^\infty \frac{\left(c \nabla_x\right)^n}{n!} g(x)= \sum_{n = 1}^\infty \frac{1}{n!} c^n \frac{\partial^n g}{\partial x^n} = g(x + c)
+\end{align*}
+
+So, the operator for a generalized Hamiltonian system could be described as follows:
+
+\begin{align*}
+    \begin{bmatrix} q_1(t_n + \Delta t) \\ q_2(t_n + \Delta t) \\ \vdots \\ p_{3N}(t_n + \Delta t)\end{bmatrix} \approx e^{- \frac{1}{2}i\nabla_\mathbf{q} \mathcal{H} \cdot \nabla_\mathbf{p}} e^{i\nabla_\mathbf{p} \mathcal{H} \cdot \nabla_\mathbf{q}} e^{- \frac{1}{2}i\nabla_\mathbf{q} \mathcal{H} \cdot \nabla_\mathbf{p}}
+    \begin{bmatrix} q_1(t_n) \\ q_2(t_n) \\ \vdots \\ p_{3N}(t_n) \end{bmatrix}
+\end{align*}
+
+%% Constrained leapfrog
 
 \end{definition}
 
