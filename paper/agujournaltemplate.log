@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  10 FEB 2025 01:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.1.17)  10 FEB 2025 12:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1280,6 +1280,16 @@ Overfull \hbox (10.09895pt too wide) in paragraph at lines 465--466
  []
 
 
+Overfull \hbox (12.01572pt too wide) in paragraph at lines 465--466
+\OT1/cmr/m/n/10 Hamil-to-nian dy-nam-ics. We can de-rive al-go-ri-htms such as the Leapfrog in-te-gra-tion, Ver- 
+ []
+
+
+Overfull \hbox (7.21013pt too wide) in paragraph at lines 465--466
+\OT1/cmr/m/n/10 let Ve-loc-ity, and much more al-go-rithms from this foun-da-tion. The present work uses it 
+ []
+
+
 ./agujournaltemplate.tex:467: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1312,7 +1322,7 @@ l.486     \notation{$\mathcal{S} \left[f\right]$}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-(./agujournaltemplate.bbl [12]
+[12] (./agujournaltemplate.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 17--34
 []\OT1/cmr/m/n/10 Breen, P. G., Fo-ley, C. N., Boekholt, T., & Zwart, S. P.  (2020, April).  New- 
  []
@@ -1392,7 +1402,7 @@ Here is how much of TeX's memory you used:
  20 hyphenation exceptions out of 8191
  72i,16n,79p,1391b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on agujournaltemplate.pdf (13 pages, 340044 bytes).
+Output written on agujournaltemplate.pdf (13 pages, 340284 bytes).
 PDF statistics:
  178 PDF objects out of 1000 (max. 8388607)
  109 compressed objects within 2 object streams

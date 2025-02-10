@@ -462,7 +462,7 @@ Thus, we obtain the generalized Verlet update equations:
     \begin{bmatrix} \mathbf{q} + \Delta t\left(\nabla_\mathbf{p} \mathcal{H}\right)\left(\mathbf{p} - \frac{\Delta t}{2} \nabla_\mathbf{q} \mathcal{H} \right) \\ \mathbf{p} - \frac{\Delta t}{2}  \left(\nabla_\mathbf{q} \mathcal{H})(\mathbf{q} + \Delta t \left(\nabla_\mathbf{p} \mathcal{H}\right)\left(\mathbf{p} - \frac{\Delta t}{2} \nabla_\mathbf{q} \mathcal{H}\right) \right) \end{bmatrix}
 \end{align*}
 
-This forms the basis for symplectic integrators and ensures energy conservation in Hamiltonian dynamics.
+This forms the basis for symplectic integrators and ensures energy conservation in Hamiltonian dynamics. We can derive algorihtms such as the Leapfrog integration, Verlet Velocity, and much more algorithms from this foundation. The present work uses it as a basis for comparison against the Physics informed Neural Networks (PINNs).
 
 \end{definition}
 
